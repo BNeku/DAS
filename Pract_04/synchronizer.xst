@@ -1,0 +1,5 @@
+set -tmpdir "C:/hlocal/Pract_04/xst/projnav.tmp"
+set -xsthdpdir "C:/hlocal/Pract_04/xst"
+elaborate
+-ifn synchronizer.prj
+-ifmt mixed

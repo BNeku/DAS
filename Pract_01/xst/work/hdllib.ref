@@ -1,0 +1,6 @@
+PB common common //alar.fdi.ucm.es/home/47471034/DAS/common/common.vhd sub00/vhpl02 1550583542
+EN bin2segs NULL //alar.fdi.ucm.es/home/47471034/DAS/common/bin2segs.vhd sub00/vhpl00 1550583543
+EN lab1 NULL //alar.fdi.ucm.es/home/47471034/DAS/p1/lab1.vhd sub00/vhpl04 1550583545
+AR bin2segs syn //alar.fdi.ucm.es/home/47471034/DAS/common/bin2segs.vhd sub00/vhpl03 1550583544
+PH common NULL //alar.fdi.ucm.es/home/47471034/DAS/common/common.vhd sub00/vhpl01 1550583541
+AR lab1 syn //alar.fdi.ucm.es/home/47471034/DAS/p1/lab1.vhd sub00/vhpl05 1550583546

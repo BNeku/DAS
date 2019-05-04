@@ -1,0 +1,89 @@
+//! **************************************************************************
+// Written by: Map P.15xf on Mon Feb 25 15:24:58 2019
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "osc" LOCATE = SITE "P8" LEVEL 1;
+COMP "clear_n" LOCATE = SITE "M3" LEVEL 1;
+COMP "lap_n" LOCATE = SITE "N2" LEVEL 1;
+COMP "rstPb_n" LOCATE = SITE "E11" LEVEL 1;
+COMP "leftSegs<0>" LOCATE = SITE "G16" LEVEL 1;
+COMP "leftSegs<1>" LOCATE = SITE "H13" LEVEL 1;
+COMP "leftSegs<2>" LOCATE = SITE "M15" LEVEL 1;
+COMP "leftSegs<3>" LOCATE = SITE "N3" LEVEL 1;
+COMP "leftSegs<4>" LOCATE = SITE "P1" LEVEL 1;
+COMP "leftSegs<5>" LOCATE = SITE "M4" LEVEL 1;
+COMP "leftSegs<6>" LOCATE = SITE "H14" LEVEL 1;
+COMP "leftSegs<7>" LOCATE = SITE "N15" LEVEL 1;
+COMP "rightSegs<0>" LOCATE = SITE "G1" LEVEL 1;
+COMP "rightSegs<1>" LOCATE = SITE "G3" LEVEL 1;
+COMP "rightSegs<2>" LOCATE = SITE "G4" LEVEL 1;
+COMP "rightSegs<3>" LOCATE = SITE "F2" LEVEL 1;
+COMP "rightSegs<4>" LOCATE = SITE "F3" LEVEL 1;
+COMP "rightSegs<5>" LOCATE = SITE "E1" LEVEL 1;
+COMP "rightSegs<6>" LOCATE = SITE "E2" LEVEL 1;
+COMP "rightSegs<7>" LOCATE = SITE "H4" LEVEL 1;
+COMP "startStop_n" LOCATE = SITE "L5" LEVEL 1;
+NET "osc_BUFGP/IBUFG" BEL "osc_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+TIMEGRP osc = BEL "lapTFF" BEL "startStopTFF" BEL "secLowReg_0" BEL
+        "secLowReg_1" BEL "secLowReg_2" BEL "secLowReg_3" BEL "secHighReg_0"
+        BEL "secHighReg_1" BEL "secHighReg_2" BEL "lapSynchronizer/aux_1" BEL
+        "lapSynchronizer/aux_0" BEL "clearSynchronizer/aux_1" BEL
+        "clearSynchronizer/aux_0" BEL "startStopSynchronizer/aux_1" BEL
+        "startStopSynchronizer/aux_0" BEL "lapEdgeDetector/aux2" BEL
+        "lapEdgeDetector/aux1" BEL "clearEdgeDetector/aux2" BEL
+        "clearEdgeDetector/aux1" BEL "startStopEdgeDetector/aux2" BEL
+        "startStopEdgeDetector/aux1" BEL "lapDebouncer/count_0" BEL
+        "lapDebouncer/count_1" BEL "lapDebouncer/count_2" BEL
+        "lapDebouncer/count_3" BEL "lapDebouncer/count_4" BEL
+        "lapDebouncer/count_5" BEL "lapDebouncer/count_6" BEL
+        "lapDebouncer/count_7" BEL "lapDebouncer/count_8" BEL
+        "lapDebouncer/count_9" BEL "lapDebouncer/count_10" BEL
+        "lapDebouncer/count_11" BEL "lapDebouncer/count_12" BEL
+        "lapDebouncer/count_13" BEL "lapDebouncer/count_14" BEL
+        "lapDebouncer/count_15" BEL "lapDebouncer/count_16" BEL
+        "lapDebouncer/count_17" BEL "lapDebouncer/count_18" BEL
+        "lapDebouncer/count_19" BEL "lapDebouncer/count_20" BEL
+        "lapDebouncer/count_21" BEL "startStopDebouncer/count_0" BEL
+        "startStopDebouncer/count_1" BEL "startStopDebouncer/count_2" BEL
+        "startStopDebouncer/count_3" BEL "startStopDebouncer/count_4" BEL
+        "startStopDebouncer/count_5" BEL "startStopDebouncer/count_6" BEL
+        "startStopDebouncer/count_7" BEL "startStopDebouncer/count_8" BEL
+        "startStopDebouncer/count_9" BEL "startStopDebouncer/count_10" BEL
+        "startStopDebouncer/count_11" BEL "startStopDebouncer/count_12" BEL
+        "startStopDebouncer/count_13" BEL "startStopDebouncer/count_14" BEL
+        "startStopDebouncer/count_15" BEL "startStopDebouncer/count_16" BEL
+        "startStopDebouncer/count_17" BEL "startStopDebouncer/count_18" BEL
+        "startStopDebouncer/count_19" BEL "startStopDebouncer/count_20" BEL
+        "startStopDebouncer/count_21" BEL "clearDebouncer/count_0" BEL
+        "clearDebouncer/count_1" BEL "clearDebouncer/count_2" BEL
+        "clearDebouncer/count_3" BEL "clearDebouncer/count_4" BEL
+        "clearDebouncer/count_5" BEL "clearDebouncer/count_6" BEL
+        "clearDebouncer/count_7" BEL "clearDebouncer/count_8" BEL
+        "clearDebouncer/count_9" BEL "clearDebouncer/count_10" BEL
+        "clearDebouncer/count_11" BEL "clearDebouncer/count_12" BEL
+        "clearDebouncer/count_13" BEL "clearDebouncer/count_14" BEL
+        "clearDebouncer/count_15" BEL "clearDebouncer/count_16" BEL
+        "clearDebouncer/count_17" BEL "clearDebouncer/count_18" BEL
+        "clearDebouncer/count_19" BEL "clearDebouncer/count_20" BEL
+        "clearDebouncer/count_21" BEL "startStopDebouncer/state_FSM_FFd2" BEL
+        "clearDebouncer/state_FSM_FFd2" BEL "lapDebouncer/state_FSM_FFd2" BEL
+        "cycleCounter/cs_22" BEL "cycleCounter/cs_21" BEL "cycleCounter/cs_20"
+        BEL "cycleCounter/cs_19" BEL "cycleCounter/cs_18" BEL
+        "cycleCounter/cs_17" BEL "cycleCounter/cs_16" BEL "cycleCounter/cs_15"
+        BEL "cycleCounter/cs_14" BEL "cycleCounter/cs_13" BEL
+        "cycleCounter/cs_12" BEL "cycleCounter/cs_11" BEL "cycleCounter/cs_10"
+        BEL "cycleCounter/cs_9" BEL "cycleCounter/cs_8" BEL
+        "cycleCounter/cs_7" BEL "cycleCounter/cs_6" BEL "cycleCounter/cs_5"
+        BEL "cycleCounter/cs_4" BEL "cycleCounter/cs_3" BEL
+        "cycleCounter/cs_2" BEL "cycleCounter/cs_1" BEL "cycleCounter/cs_0"
+        BEL "secLowCounter/cs_3" BEL "secLowCounter/cs_2" BEL
+        "secLowCounter/cs_1" BEL "secLowCounter/cs_0" BEL "decCounter/cs_3"
+        BEL "decCounter/cs_2" BEL "decCounter/cs_1" BEL "decCounter/cs_0" BEL
+        "secHighCounter/cs_2" BEL "secHighCounter/cs_1" BEL
+        "secHighCounter/cs_0" BEL "startStopDebouncer/state_FSM_FFd1" BEL
+        "clearDebouncer/state_FSM_FFd1" BEL "lapDebouncer/state_FSM_FFd1" BEL
+        "osc_BUFGP/BUFG.GCLKMUX" BEL "osc_BUFGP/BUFG";
+TSosc = PERIOD TIMEGRP "osc" 20 ns HIGH 50%;
+SCHEMATIC END;
+

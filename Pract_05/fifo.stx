@@ -1,0 +1,44 @@
+Release 14.1 - xst P.15xf (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/hlocal/Pract_05/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to C:/hlocal/Pract_05/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/hlocal/common/common.vhd" in Library work.
+Architecture common of Entity common is up to date.
+Compiling vhdl file "C:/hlocal/common/fifo.vhd" in Library work.
+Entity <fifo> compiled.
+ERROR:HDLParsers:164 - "C:/hlocal/common/fifo.vhd" Line 69. parse error, unexpected POINT
+ERROR:HDLParsers:164 - "C:/hlocal/common/fifo.vhd" Line 73. parse error, unexpected POINT
+ERROR:HDLParsers:164 - "C:/hlocal/common/fifo.vhd" Line 77. parse error, unexpected POINT
+ERROR:HDLParsers:164 - "C:/hlocal/common/fifo.vhd" Line 78. parse error, unexpected POINT
+ERROR:HDLParsers:164 - "C:/hlocal/common/fifo.vhd" Line 80. parse error, unexpected POINT
+ERROR:HDLParsers:164 - "C:/hlocal/common/fifo.vhd" Line 81. parse error, unexpected POINT
+ERROR:HDLParsers:164 - "C:/hlocal/common/fifo.vhd" Line 93. parse error, unexpected POINT
+ERROR:HDLParsers:164 - "C:/hlocal/common/fifo.vhd" Line 96. parse error, unexpected POINT
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> 
+
+Total memory usage is 4495976 kilobytes
+
+Number of errors   :    8 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

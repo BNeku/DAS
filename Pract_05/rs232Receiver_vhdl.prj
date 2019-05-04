@@ -1,0 +1,3 @@
+vhdl work "C:\hlocal\common\synchronizer.vhd"
+vhdl work "C:\hlocal\common\common.vhd"
+vhdl work "C:\hlocal\common\rs232Receiver.vhd"

@@ -1,0 +1,54 @@
+V3 49
+FL C:/hlocal/common/bin2segs.vhd 2019/02/25.15:24:07 P.15xf
+FL C:/hlocal/common/common.vhd 2019/03/19.15:47:06 P.15xf
+FL C:/hlocal/common/fifo.vhd 2019/03/26.15:05:57 P.15xf
+FL C:/hlocal/common/rs232Receiver.vhd 2019/03/26.15:51:22 P.15xf
+FL C:/hlocal/common/rs232Transmitter.vhd 2019/03/26.15:41:24 P.15xf
+FL C:/hlocal/common/synchronizer.vhd 2019/02/19.14:15:19 P.15xf
+FL C:/hlocal/das/common/bin2segs.vhd 2019/02/25.15:24:07 P.15xf
+EN work/bin2segs 1553780619 FL C:/hlocal/das/common/bin2segs.vhd \
+      PB ieee/std_logic_1164 1335251622
+AR work/bin2segs/syn 1553780620 \
+      FL C:/hlocal/das/common/bin2segs.vhd EN work/bin2segs 1553780619
+FL C:/hlocal/das/common/common.vhd 2019/03/19.15:47:06 P.15xf
+PH work/common 1553780609 FL C:/hlocal/das/common/common.vhd \
+      PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627 CD bin2segs \
+      CD synchronizer CD debouncer CD edgeDetector CD frequencySynthesizer \
+      CD ps2Receiver CD fifo CD rs232Receiver CD rs232Transmitter
+PB work/common 1553780610 \
+      FL C:/hlocal/das/common/common.vhd PH work/common 1553780609
+FL C:/hlocal/das/common/fifo.vhd 2019/03/27.16:36:33 P.15xf
+EN work/fifo 1553780615 FL C:/hlocal/das/common/fifo.vhd PB ieee/std_logic_1164 1335251622
+AR work/fifo/syn 1553780616 \
+      FL C:/hlocal/das/common/fifo.vhd EN work/fifo 1553780615 PB ieee/NUMERIC_STD 1335251627 \
+      PB work/common 1553780610
+FL C:/hlocal/das/common/rs232Receiver.vhd 2019/03/28.14:42:21 P.15xf
+EN work/rs232Receiver 1553780613 FL C:/hlocal/das/common/rs232Receiver.vhd \
+      PB ieee/std_logic_1164 1335251622
+AR work/rs232Receiver/syn 1553780614 \
+      FL C:/hlocal/das/common/rs232Receiver.vhd EN work/rs232Receiver 1553780613 \
+      PB work/common 1553780610 CP synchronizer
+FL C:/hlocal/das/common/rs232Transmitter.vhd 2019/03/28.14:27:27 P.15xf
+EN work/rs232Transmitter 1553780617 FL C:/hlocal/das/common/rs232Transmitter.vhd \
+      PB ieee/std_logic_1164 1335251622
+AR work/rs232Transmitter/syn 1553780618 \
+      FL C:/hlocal/das/common/rs232Transmitter.vhd EN work/rs232Transmitter 1553780617 \
+      PB work/common 1553780610
+FL C:/hlocal/das/common/synchronizer.vhd 2019/02/19.14:15:19 P.15xf
+EN work/synchronizer 1553780611 FL C:/hlocal/das/common/synchronizer.vhd \
+      PB ieee/std_logic_1164 1335251622
+AR work/synchronizer/syn 1553780612 \
+      FL C:/hlocal/das/common/synchronizer.vhd EN work/synchronizer 1553780611
+FL C:/hlocal/das/Pract_05/lab5.vhd 2019/03/28.14:18:43 P.15xf
+EN work/lab5 1553780621 FL C:/hlocal/das/Pract_05/lab5.vhd PB ieee/std_logic_1164 1335251622
+AR work/lab5/syn 1553780622 \
+      FL C:/hlocal/das/Pract_05/lab5.vhd EN work/lab5 1553780621 PB work/common 1553780610 \
+      CP synchronizer CP rs232receiver CP fifo CP rs232transmitter CP bin2segs
+FL C:/hlocal/Pract_05/lab5.vhd 2019/03/26.15:21:26 P.15xf
+FL J:/das/common/bin2segs.vhd 2019/02/25.15:24:07 P.15xf
+FL J:/das/common/common.vhd 2019/03/19.15:47:06 P.15xf
+FL J:/das/common/fifo.vhd 2019/03/27.16:36:33 P.15xf
+FL J:/das/common/rs232Receiver.vhd 2019/03/27.16:25:05 P.15xf
+FL J:/das/common/rs232Transmitter.vhd 2019/03/27.16:28:48 P.15xf
+FL J:/das/common/synchronizer.vhd 2019/02/19.14:15:19 P.15xf
+FL J:/das/Pract_05/lab5.vhd 2019/03/27.16:31:42 P.15xf

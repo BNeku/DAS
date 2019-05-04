@@ -1,0 +1,56 @@
+V3 40
+FL //alar.fdi.ucm.es/home/46868096/common/bin2segs.vhd 2019/02/12.15:23:48 P.15xf
+FL //alar.fdi.ucm.es/home/46868096/common/common.vhd 2019/02/19.15:07:00 P.15xf
+FL //alar.fdi.ucm.es/home/46868096/common/debouncer.vhd 2019/02/19.14:15:42 P.15xf
+FL //alar.fdi.ucm.es/home/46868096/common/edgedetector.vhd 2019/02/19.14:15:32 P.15xf
+FL //alar.fdi.ucm.es/home/46868096/common/synchronizer.vhd 2019/02/19.14:15:20 P.15xf
+FL //alar.fdi.ucm.es/home/46868096/Pract_02/lab2.vhd 2019/02/20.15:47:10 P.15xf
+FL //alar.fdi.ucm.es/home/46868096/Pract_02/modcounter.vhd 2019/02/20.15:39:45 P.15xf
+FL //alar.fdi.ucm.es/home/47471034/DAS/common/bin2segs.vhd 2019/02/25.15:24:07 P.15xf
+EN work/bin2segs 1551104675 \
+      FL //alar.fdi.ucm.es/home/47471034/DAS/common/bin2segs.vhd \
+      PB ieee/std_logic_1164 1335251622
+AR work/bin2segs/syn 1551104676 \
+      FL //alar.fdi.ucm.es/home/47471034/DAS/common/bin2segs.vhd EN work/bin2segs 1551104675
+FL //alar.fdi.ucm.es/home/47471034/DAS/common/common.vhd 2019/02/25.15:08:33 P.15xf
+PH work/common 1551104665 \
+      FL //alar.fdi.ucm.es/home/47471034/DAS/common/common.vhd \
+      PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627 CD bin2segs \
+      CD synchronizer CD debouncer CD edgeDetector CD frequencySynthesizer
+PB work/common 1551104666 \
+      FL //alar.fdi.ucm.es/home/47471034/DAS/common/common.vhd PH work/common 1551104665
+FL //alar.fdi.ucm.es/home/47471034/DAS/common/debouncer.vhd 2019/02/19.14:15:41 P.15xf
+EN work/debouncer 1551104669 \
+      FL //alar.fdi.ucm.es/home/47471034/DAS/common/debouncer.vhd \
+      PB ieee/std_logic_1164 1335251622
+AR work/debouncer/syn 1551104670 \
+      FL //alar.fdi.ucm.es/home/47471034/DAS/common/debouncer.vhd \
+      EN work/debouncer 1551104669
+FL //alar.fdi.ucm.es/home/47471034/DAS/common/edgedetector.vhd 2019/02/19.14:15:31 P.15xf
+EN work/edgeDetector 1551104671 \
+      FL //alar.fdi.ucm.es/home/47471034/DAS/common/edgedetector.vhd \
+      PB ieee/std_logic_1164 1335251622
+AR work/edgeDetector/syn 1551104672 \
+      FL //alar.fdi.ucm.es/home/47471034/DAS/common/edgedetector.vhd \
+      EN work/edgeDetector 1551104671
+FL //alar.fdi.ucm.es/home/47471034/DAS/common/synchronizer.vhd 2019/02/19.14:15:19 P.15xf
+EN work/synchronizer 1551104667 \
+      FL //alar.fdi.ucm.es/home/47471034/DAS/common/synchronizer.vhd \
+      PB ieee/std_logic_1164 1335251622
+AR work/synchronizer/syn 1551104668 \
+      FL //alar.fdi.ucm.es/home/47471034/DAS/common/synchronizer.vhd \
+      EN work/synchronizer 1551104667
+FL //alar.fdi.ucm.es/home/47471034/DAS/Pract_02/lab2.vhd 2019/02/20.15:47:10 P.15xf
+EN work/lab2 1551104677 FL //alar.fdi.ucm.es/home/47471034/DAS/Pract_02/lab2.vhd \
+      PB ieee/std_logic_1164 1335251622
+AR work/lab2/syn 1551104678 \
+      FL //alar.fdi.ucm.es/home/47471034/DAS/Pract_02/lab2.vhd EN work/lab2 1551104677 \
+      PB work/common 1551104666 CP synchronizer CP debouncer CP edgeDetector \
+      CP modCounter CP secHighMux CP secLowMux CP bin2segs
+FL //alar.fdi.ucm.es/home/47471034/DAS/Pract_02/modcounter.vhd 2019/02/20.15:39:45 P.15xf
+EN work/modCounter 1551104673 \
+      FL //alar.fdi.ucm.es/home/47471034/DAS/Pract_02/modcounter.vhd \
+      PB ieee/std_logic_1164 1335251622 PB work/common 1551104666
+AR work/modCounter/syn 1551104674 \
+      FL //alar.fdi.ucm.es/home/47471034/DAS/Pract_02/modcounter.vhd \
+      EN work/modCounter 1551104673 PB ieee/NUMERIC_STD 1335251627

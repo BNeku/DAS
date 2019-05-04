@@ -1,0 +1,28 @@
+Command line:
+   ps2ReceiverTest_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  52049
+
+Mon Mar 18 14:10:35 2019
+
+
+ Elaboration Time: 0.015625 sec
+
+ Current Memory Usage: 5805.02 Meg
+
+ Total Signals          : 33
+ Total Nets             : 32
+ Total Signal Drivers   : 15
+ Total Blocks           : 11
+ Total Primitive Blocks : 9
+ Total Processes        : 15
+ Total Traceable Variables  : 30
+ Total Scalar Nets and Variables : 1140
+
+ Total Simulation Time: 25.5469 sec
+
+ Current Memory Usage: 5333.16 Meg
+
+Mon Mar 18 14:11:50 2019
+

@@ -1,0 +1,41 @@
+V3 36
+FL C:/hlocal/common/bin2segs.vhd 2019/02/25.15:24:07 P.15xf
+EN work/bin2segs 1552919571 FL C:/hlocal/common/bin2segs.vhd \
+      PB ieee/std_logic_1164 1335251622
+AR work/bin2segs/syn 1552919572 \
+      FL C:/hlocal/common/bin2segs.vhd EN work/bin2segs 1552919571
+FL C:/hlocal/common/common.vhd 2019/03/04.15:32:39 P.15xf
+PH work/common 1552917271 FL C:/hlocal/common/common.vhd PB ieee/std_logic_1164 1335251622 \
+      PB ieee/NUMERIC_STD 1335251627 CD bin2segs CD synchronizer CD debouncer \
+      CD edgeDetector CD frequencySynthesizer CD ps2Receiver
+PB work/common 1552917272 \
+      FL C:/hlocal/common/common.vhd PH work/common 1552917271
+FL C:/hlocal/common/edgedetector.vhd 2019/02/19.14:15:31 P.15xf
+EN work/edgeDetector 1552919567 FL C:/hlocal/common/edgedetector.vhd \
+      PB ieee/std_logic_1164 1335251622
+AR work/edgeDetector/syn 1552919568 \
+      FL C:/hlocal/common/edgedetector.vhd EN work/edgeDetector 1552919567
+FL C:/hlocal/common/ps2receiver.vhd 2019/03/11.15:40:50 P.15xf
+EN work/ps2Receiver 1552919569 FL C:/hlocal/common/ps2receiver.vhd \
+      PB ieee/std_logic_1164 1335251622
+AR work/ps2Receiver/syn 1552919570 \
+      FL C:/hlocal/common/ps2receiver.vhd EN work/ps2Receiver 1552919569 \
+      PB work/common 1552917272 CP synchronizer CP edgeDetector CP parityOK \
+      CP lastBit
+FL C:/hlocal/common/synchronizer.vhd 2019/02/19.14:15:19 P.15xf
+EN work/synchronizer 1552919565 FL C:/hlocal/common/synchronizer.vhd \
+      PB ieee/std_logic_1164 1335251622
+AR work/synchronizer/syn 1552919566 \
+      FL C:/hlocal/common/synchronizer.vhd EN work/synchronizer 1552919565
+FL C:/hlocal/Pract_04/lab4.vhd 2019/03/18.15:31:40 P.15xf
+EN work/lab4 1552919573 FL C:/hlocal/Pract_04/lab4.vhd PB ieee/std_logic_1164 1335251622
+AR work/lab4/syn 1552919574 \
+      FL C:/hlocal/Pract_04/lab4.vhd EN work/lab4 1552919573 PB work/common 1552917272 \
+      CP synchronizer CP ps2Receiver CP bin2segs CP with
+FL C:/hlocal/Pract_04/ps2receivertest.vhd 2019/03/04.14:13:22 P.15xf
+EN work/ps2ReceiverTest 0 FL C:/hlocal/Pract_04/ps2receivertest.vhd
+AR work/ps2ReceiverTest/sim 0 \
+      FL C:/hlocal/Pract_04/ps2receivertest.vhd EN work/ps2ReceiverTest 0 \
+      PB ieee/std_logic_1164 1335251622 PB ieee/STD_LOGIC_TEXTIO 1335251626 \
+      PB work/common 1552917272 PB std/TEXTIO 1335251621 CP ps2Receiver CP rst_n \
+      CP clk

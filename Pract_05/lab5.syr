@@ -1,0 +1,546 @@
+Release 14.1 - xst P.15xf (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: lab5.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "lab5.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "lab5"
+Output Format                      : NGC
+Target Device                      : xc3s1000-4-ft256
+
+---- Source Options
+Top Module Name                    : lab5
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/hlocal/das/common/common.vhd" in Library work.
+Architecture common of Entity common is up to date.
+Compiling vhdl file "C:/hlocal/das/common/synchronizer.vhd" in Library work.
+Architecture syn of Entity synchronizer is up to date.
+Compiling vhdl file "C:/hlocal/das/common/rs232Receiver.vhd" in Library work.
+Entity <rs232receiver> compiled.
+Entity <rs232receiver> (Architecture <syn>) compiled.
+Compiling vhdl file "C:/hlocal/das/common/fifo.vhd" in Library work.
+Architecture syn of Entity fifo is up to date.
+Compiling vhdl file "C:/hlocal/das/common/rs232Transmitter.vhd" in Library work.
+Architecture syn of Entity rs232transmitter is up to date.
+Compiling vhdl file "C:/hlocal/das/common/bin2segs.vhd" in Library work.
+Architecture syn of Entity bin2segs is up to date.
+Compiling vhdl file "C:/hlocal/das/Pract_05/lab5.vhd" in Library work.
+Architecture syn of Entity lab5 is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <lab5> in library <work> (architecture <syn>).
+
+Analyzing hierarchy for entity <synchronizer> in library <work> (architecture <syn>) with generics.
+	INIT = '0'
+	STAGES = 2
+
+Analyzing hierarchy for entity <synchronizer> in library <work> (architecture <syn>) with generics.
+	INIT = '1'
+	STAGES = 2
+
+Analyzing hierarchy for entity <rs232Receiver> in library <work> (architecture <syn>) with generics.
+	BAUDRATE = 1200
+	FREQ = 50000
+
+Analyzing hierarchy for entity <fifo> in library <work> (architecture <syn>) with generics.
+	DEPTH = 16
+	WIDTH = 8
+
+Analyzing hierarchy for entity <rs232Transmitter> in library <work> (architecture <syn>) with generics.
+	BAUDRATE = 1200
+	FREQ = 50000
+
+Analyzing hierarchy for entity <bin2segs> in library <work> (architecture <syn>).
+
+Analyzing hierarchy for entity <synchronizer> in library <work> (architecture <syn>) with generics.
+	INIT = '1'
+	STAGES = 2
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <lab5> in library <work> (Architecture <syn>).
+Entity <lab5> analyzed. Unit <lab5> generated.
+
+Analyzing generic Entity <synchronizer.1> in library <work> (Architecture <syn>).
+	INIT = '0'
+	STAGES = 2
+Entity <synchronizer.1> analyzed. Unit <synchronizer.1> generated.
+
+Analyzing generic Entity <synchronizer.2> in library <work> (Architecture <syn>).
+	INIT = '1'
+	STAGES = 2
+Entity <synchronizer.2> analyzed. Unit <synchronizer.2> generated.
+
+Analyzing generic Entity <rs232Receiver> in library <work> (Architecture <syn>).
+	BAUDRATE = 1200
+	FREQ = 50000
+Entity <rs232Receiver> analyzed. Unit <rs232Receiver> generated.
+
+Analyzing generic Entity <fifo> in library <work> (Architecture <syn>).
+	DEPTH = 16
+	WIDTH = 8
+Entity <fifo> analyzed. Unit <fifo> generated.
+
+Analyzing generic Entity <rs232Transmitter> in library <work> (Architecture <syn>).
+	BAUDRATE = 1200
+	FREQ = 50000
+Entity <rs232Transmitter> analyzed. Unit <rs232Transmitter> generated.
+
+Analyzing Entity <bin2segs> in library <work> (Architecture <syn>).
+Entity <bin2segs> analyzed. Unit <bin2segs> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <synchronizer_1>.
+    Related source file is "C:/hlocal/das/common/synchronizer.vhd".
+    Found 2-bit register for signal <aux>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <synchronizer_1> synthesized.
+
+
+Synthesizing Unit <synchronizer_2>.
+    Related source file is "C:/hlocal/das/common/synchronizer.vhd".
+    Found 2-bit register for signal <aux>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <synchronizer_2> synthesized.
+
+
+Synthesizing Unit <fifo>.
+    Related source file is "C:/hlocal/das/common/fifo.vhd".
+    Found 8-bit 16-to-1 multiplexer for signal <dataOut>.
+    Found 1-bit register for signal <isEmpty>.
+    Found 4-bit comparator equal for signal <isEmpty$cmp_eq0000> created at line 105.
+    Found 4-bit comparator not equal for signal <isEmpty$cmp_ne0000> created at line 105.
+    Found 1-bit register for signal <isFull>.
+    Found 4-bit comparator not equal for signal <isFull$cmp_ne0000> created at line 97.
+    Found 4-bit adder for signal <nextRdPointer$addsub0000> created at line 83.
+    Found 4-bit adder for signal <nextWrPointer$addsub0000> created at line 82.
+    Found 4-bit comparator equal for signal <nextWrPointer$cmp_eq0000> created at line 82.
+    Found 4-bit register for signal <rdPointer>.
+    Found 128-bit register for signal <regFile>.
+    Found 4-bit register for signal <wrPointer>.
+    Summary:
+	inferred 138 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+	inferred   8 Multiplexer(s).
+Unit <fifo> synthesized.
+
+
+Synthesizing Unit <rs232Transmitter>.
+    Related source file is "C:/hlocal/das/common/rs232Transmitter.vhd".
+    Found 4-bit register for signal <bitPos>.
+    Found 4-bit adder for signal <bitPos$addsub0000> created at line 111.
+    Found 16-bit register for signal <count>.
+    Found 16-bit adder for signal <count$addsub0000> created at line 73.
+    Found 10-bit register for signal <TxDShf>.
+    Summary:
+	inferred  30 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+Unit <rs232Transmitter> synthesized.
+
+
+Synthesizing Unit <bin2segs>.
+    Related source file is "C:/hlocal/das/common/bin2segs.vhd".
+    Found 16x7-bit ROM for signal <bin$rom0000>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <bin2segs> synthesized.
+
+
+Synthesizing Unit <rs232Receiver>.
+    Related source file is "C:/hlocal/das/common/rs232Receiver.vhd".
+    Found 4-bit register for signal <bitPos>.
+    Found 4-bit adder for signal <bitPos$addsub0000> created at line 116.
+    Found 16-bit register for signal <count>.
+    Found 16-bit adder for signal <count$addsub0000> created at line 77.
+    Found 8-bit register for signal <RxDShf>.
+    Summary:
+	inferred  28 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+Unit <rs232Receiver> synthesized.
+
+
+Synthesizing Unit <lab5>.
+    Related source file is "C:/hlocal/das/Pract_05/lab5.vhd".
+Unit <lab5> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 3
+ 16x7-bit ROM                                          : 3
+# Adders/Subtractors                                   : 6
+ 16-bit adder                                          : 2
+ 4-bit adder                                           : 4
+# Registers                                            : 32
+ 1-bit register                                        : 8
+ 10-bit register                                       : 1
+ 16-bit register                                       : 2
+ 4-bit register                                        : 4
+ 8-bit register                                        : 17
+# Comparators                                          : 4
+ 4-bit comparator equal                                : 2
+ 4-bit comparator not equal                            : 2
+# Multiplexers                                         : 1
+ 8-bit 16-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <TxDShf_9> (without init value) has a constant value of 1 in block <transmitter>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 3
+ 16x7-bit ROM                                          : 3
+# Adders/Subtractors                                   : 6
+ 16-bit adder                                          : 2
+ 4-bit adder                                           : 4
+# Registers                                            : 202
+ Flip-Flops                                            : 202
+# Comparators                                          : 4
+ 4-bit comparator equal                                : 2
+ 4-bit comparator not equal                            : 2
+# Multiplexers                                         : 1
+ 8-bit 16-to-1 multiplexer                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <TxDShf_9> (without init value) has a constant value of 1 in block <rs232Transmitter>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <lab5> ...
+
+Optimizing unit <fifo> ...
+
+Optimizing unit <rs232Transmitter> ...
+
+Optimizing unit <rs232Receiver> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block lab5, actual ratio is 2.
+FlipFlop fifo/rdPointer_0 has been replicated 1 time(s)
+FlipFlop fifo/rdPointer_1 has been replicated 1 time(s)
+FlipFlop fifo/rdPointer_2 has been replicated 1 time(s)
+FlipFlop fifo/wrPointer_0 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 205
+ Flip-Flops                                            : 205
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : lab5.ngr
+Top Level Output File Name         : lab5
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 29
+
+Cell Usage :
+# BELS                             : 368
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 30
+#      LUT2                        : 29
+#      LUT2_D                      : 1
+#      LUT2_L                      : 1
+#      LUT3                        : 99
+#      LUT3_D                      : 1
+#      LUT3_L                      : 1
+#      LUT4                        : 69
+#      LUT4_D                      : 7
+#      LUT4_L                      : 4
+#      MUXCY                       : 30
+#      MUXF5                       : 33
+#      MUXF6                       : 16
+#      MUXF7                       : 8
+#      VCC                         : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 205
+#      FDC                         : 42
+#      FDCE                        : 141
+#      FDP                         : 4
+#      FDPE                        : 18
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 28
+#      IBUF                        : 3
+#      OBUF                        : 25
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1000ft256-4 
+
+ Number of Slices:                      196  out of   7680     2%  
+ Number of Slice Flip Flops:            205  out of  15360     1%  
+ Number of 4 input LUTs:                247  out of  15360     1%  
+ Number of IOs:                          29
+ Number of bonded IOBs:                  29  out of    173    16%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+osc                                | BUFGP                  | 205   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------------------+---------------------------------+-------+
+Control Signal                                                 | Buffer(FF name)                 | Load  |
+---------------------------------------------------------------+---------------------------------+-------+
+TxEnableSynchronizer/rst_n_inv(transmitter/rst_n_inv1_INV_0:O) | NONE(TxEnableSynchronizer/aux_0)| 203   |
+resetSyncronizer/rst_n_inv(resetSyncronizer/rst_n_inv1_INV_0:O)| NONE(resetSyncronizer/aux_0)    | 2     |
+---------------------------------------------------------------+---------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 11.605ns (Maximum Frequency: 86.170MHz)
+   Minimum input arrival time before clock: 1.825ns
+   Maximum output required time after clock: 9.852ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'osc'
+  Clock period: 11.605ns (frequency: 86.170MHz)
+  Total number of paths / destination ports: 5956 / 361
+-------------------------------------------------------------------------
+Delay:               11.605ns (Levels of Logic = 6)
+  Source:            transmitter/bitPos_1 (FF)
+  Destination:       fifo/isEmpty (FF)
+  Source Clock:      osc rising
+  Destination Clock: osc rising
+
+  Data Path: transmitter/bitPos_1 to fifo/isEmpty
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.720   1.342  transmitter/bitPos_1 (transmitter/bitPos_1)
+     LUT4:I0->O            1   0.551   0.869  transmitter/busy1_1 (transmitter/busy1)
+     LUT3:I2->O           12   0.551   1.186  fifo/rdFifo_and00001 (fifo/rdFifo)
+     LUT3:I2->O            4   0.551   0.943  fifo/nextRdPointer_and000068 (fifo/nextRdPointer_and0000)
+     LUT4:I3->O            3   0.551   0.933  fifo/nextRdPointer<2>1 (fifo/nextRdPointer<2>)
+     LUT4:I3->O            2   0.551   0.903  fifo/isEmpty_mux000026 (fifo/isEmpty_mux000026)
+     LUT4:I3->O            1   0.551   0.801  fifo/isEmpty_not000174 (fifo/isEmpty_not0001)
+     FDPE:CE                   0.602          fifo/isEmpty
+    ----------------------------------------
+    Total                     11.605ns (4.628ns logic, 6.977ns route)
+                                       (39.9% logic, 60.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'osc'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              1.825ns (Levels of Logic = 1)
+  Source:            TxEnable_n (PAD)
+  Destination:       TxEnableSynchronizer/aux_0 (FF)
+  Destination Clock: osc rising
+
+  Data Path: TxEnable_n to TxEnableSynchronizer/aux_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.821   0.801  TxEnable_n_IBUF (TxEnable_n_IBUF)
+     FDP:D                     0.203          TxEnableSynchronizer/aux_0
+    ----------------------------------------
+    Total                      1.825ns (1.024ns logic, 0.801ns route)
+                                       (56.1% logic, 43.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'osc'
+  Total number of paths / destination ports: 64 / 19
+-------------------------------------------------------------------------
+Offset:              9.852ns (Levels of Logic = 2)
+  Source:            receiver/RxDShf_3 (FF)
+  Destination:       rightSegs<6> (PAD)
+  Source Clock:      osc rising
+
+  Data Path: receiver/RxDShf_3 to rightSegs<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q            24   0.720   2.136  receiver/RxDShf_3 (receiver/RxDShf_3)
+     LUT4:I0->O            1   0.551   0.801  rigthConverter/Mrom_bin_rom000012 (rightSegs_1_OBUF)
+     OBUF:I->O                 5.644          rightSegs_1_OBUF (rightSegs<1>)
+    ----------------------------------------
+    Total                      9.852ns (6.915ns logic, 2.937ns route)
+                                       (70.2% logic, 29.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.55 secs
+ 
+--> 
+
+Total memory usage is 4532368 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

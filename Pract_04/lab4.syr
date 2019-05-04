@@ -1,0 +1,510 @@
+Release 14.1 - xst P.15xf (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: lab4.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "lab4.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "lab4"
+Output Format                      : NGC
+Target Device                      : xc3s1000-4-ft256
+
+---- Source Options
+Top Module Name                    : lab4
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/hlocal/common/synchronizer.vhd" in Library work.
+Architecture syn of Entity synchronizer is up to date.
+Compiling vhdl file "C:/hlocal/common/edgedetector.vhd" in Library work.
+Architecture syn of Entity edgedetector is up to date.
+Compiling vhdl file "C:/hlocal/common/ps2receiver.vhd" in Library work.
+Architecture syn of Entity ps2receiver is up to date.
+Compiling vhdl file "C:/hlocal/common/bin2segs.vhd" in Library work.
+Architecture syn of Entity bin2segs is up to date.
+Compiling vhdl file "C:/hlocal/Pract_04/lab4.vhd" in Library work.
+Entity <lab4> compiled.
+Entity <lab4> (Architecture <syn>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <lab4> in library <work> (architecture <syn>).
+
+Analyzing hierarchy for entity <synchronizer> in library <work> (architecture <syn>) with generics.
+	INIT = '0'
+	STAGES = 2
+
+Analyzing hierarchy for entity <ps2Receiver> in library <work> (architecture <syn>) with generics.
+	REGOUTPUTS = false
+
+Analyzing hierarchy for entity <bin2segs> in library <work> (architecture <syn>).
+
+Analyzing hierarchy for entity <synchronizer> in library <work> (architecture <syn>) with generics.
+	INIT = '1'
+	STAGES = 2
+
+Analyzing hierarchy for entity <edgeDetector> in library <work> (architecture <syn>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <lab4> in library <work> (Architecture <syn>).
+Entity <lab4> analyzed. Unit <lab4> generated.
+
+Analyzing generic Entity <synchronizer.1> in library <work> (Architecture <syn>).
+	INIT = '0'
+	STAGES = 2
+Entity <synchronizer.1> analyzed. Unit <synchronizer.1> generated.
+
+Analyzing generic Entity <ps2Receiver> in library <work> (Architecture <syn>).
+	REGOUTPUTS = false
+WARNING:Xst:753 - "C:/hlocal/common/ps2receiver.vhd" line 57: Unconnected output port 'xRise' of component 'edgeDetector'.
+Entity <ps2Receiver> analyzed. Unit <ps2Receiver> generated.
+
+Analyzing generic Entity <synchronizer.2> in library <work> (Architecture <syn>).
+	INIT = '1'
+	STAGES = 2
+Entity <synchronizer.2> analyzed. Unit <synchronizer.2> generated.
+
+Analyzing Entity <edgeDetector> in library <work> (Architecture <syn>).
+Entity <edgeDetector> analyzed. Unit <edgeDetector> generated.
+
+Analyzing Entity <bin2segs> in library <work> (Architecture <syn>).
+Entity <bin2segs> analyzed. Unit <bin2segs> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <synchronizer_1>.
+    Related source file is "C:/hlocal/common/synchronizer.vhd".
+    Found 2-bit register for signal <aux>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <synchronizer_1> synthesized.
+
+
+Synthesizing Unit <bin2segs>.
+    Related source file is "C:/hlocal/common/bin2segs.vhd".
+    Found 16x7-bit ROM for signal <bin$rom0000>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <bin2segs> synthesized.
+
+
+Synthesizing Unit <synchronizer_2>.
+    Related source file is "C:/hlocal/common/synchronizer.vhd".
+    Found 2-bit register for signal <aux>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <synchronizer_2> synthesized.
+
+
+Synthesizing Unit <edgeDetector>.
+    Related source file is "C:/hlocal/common/edgedetector.vhd".
+    Found 1-bit register for signal <aux1>.
+    Found 1-bit register for signal <aux2>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <edgeDetector> synthesized.
+
+
+Synthesizing Unit <ps2Receiver>.
+    Related source file is "C:/hlocal/common/ps2receiver.vhd".
+    Found 1-bit xor10 for signal <parityOK>.
+    Found 11-bit register for signal <ps2DataShf>.
+    Summary:
+	inferred  11 D-type flip-flop(s).
+	inferred   1 Xor(s).
+Unit <ps2Receiver> synthesized.
+
+
+Synthesizing Unit <lab4>.
+    Related source file is "C:/hlocal/Pract_04/lab4.vhd".
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst_n                     (negative)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Power Up State     | 00                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit register for signal <code>.
+    Found 31-bit down counter for signal <count>.
+    Found 1-bit register for signal <speakerTFF>.
+    Found 8-bit comparator not equal for signal <state$cmp_ne0001> created at line 162.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Counter(s).
+	inferred   9 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <lab4> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 2
+ 16x7-bit ROM                                          : 2
+# Counters                                             : 1
+ 31-bit down counter                                   : 1
+# Registers                                            : 11
+ 1-bit register                                        : 9
+ 11-bit register                                       : 1
+ 8-bit register                                        : 1
+# Comparators                                          : 1
+ 8-bit comparator not equal                            : 1
+# Xors                                                 : 1
+ 1-bit xor10                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <state/FSM> on signal <state[1:2]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 10
+ 10    | 11
+ 11    | 01
+-------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# ROMs                                                 : 2
+ 16x7-bit ROM                                          : 2
+# Counters                                             : 1
+ 31-bit down counter                                   : 1
+# Registers                                            : 28
+ Flip-Flops                                            : 28
+# Comparators                                          : 1
+ 8-bit comparator not equal                            : 1
+# Xors                                                 : 1
+ 1-bit xor10                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <lab4> ...
+
+Optimizing unit <ps2Receiver> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block lab4, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 61
+ Flip-Flops                                            : 61
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : lab4.ngr
+Top Level Output File Name         : lab4
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 21
+
+Cell Usage :
+# BELS                             : 256
+#      GND                         : 1
+#      INV                         : 34
+#      LUT1                        : 1
+#      LUT2                        : 32
+#      LUT2_D                      : 4
+#      LUT2_L                      : 4
+#      LUT3                        : 12
+#      LUT3_L                      : 4
+#      LUT4                        : 68
+#      LUT4_D                      : 11
+#      LUT4_L                      : 10
+#      MUXCY                       : 38
+#      MUXF5                       : 5
+#      VCC                         : 1
+#      XORCY                       : 31
+# FlipFlops/Latches                : 61
+#      FDC                         : 23
+#      FDCE                        : 1
+#      FDP                         : 18
+#      FDPE                        : 19
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 20
+#      IBUF                        : 3
+#      OBUF                        : 17
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s1000ft256-4 
+
+ Number of Slices:                       93  out of   7680     1%  
+ Number of Slice Flip Flops:             61  out of  15360     0%  
+ Number of 4 input LUTs:                180  out of  15360     1%  
+ Number of IOs:                          21
+ Number of bonded IOBs:                  21  out of    173    12%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+osc                                | BUFGP                  | 61    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------------------------+-----------------------------+-------+
+Control Signal                                                       | Buffer(FF name)             | Load  |
+---------------------------------------------------------------------+-----------------------------+-------+
+ps2KeyboardInterface/ps2ClkEdgeDetector/rst_n_inv(rst_n_inv1_INV_0:O)| NONE(code_0)                | 59    |
+resetSyncronizer/rst_n_inv(resetSyncronizer/rst_n_inv1_INV_0:O)      | NONE(resetSyncronizer/aux_0)| 2     |
+---------------------------------------------------------------------+-----------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 9.200ns (Maximum Frequency: 108.696MHz)
+   Minimum input arrival time before clock: 1.825ns
+   Maximum output required time after clock: 9.874ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'osc'
+  Clock period: 9.200ns (frequency: 108.696MHz)
+  Total number of paths / destination ports: 2768 / 78
+-------------------------------------------------------------------------
+Delay:               9.200ns (Levels of Logic = 6)
+  Source:            code_0 (FF)
+  Destination:       count_7 (FF)
+  Source Clock:      osc rising
+  Destination Clock: osc rising
+
+  Data Path: code_0 to count_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q            22   0.720   1.795  code_0 (code_0)
+     LUT3:I1->O            2   0.551   0.903  halfPeriod<10>1111_SW0 (N74)
+     LUT4_D:I3->O          7   0.551   1.092  halfPeriod<10>1111 (N30)
+     LUT4_D:I3->LO         1   0.551   0.126  halfPeriod<7>11_SW0 (N116)
+     LUT4:I3->O            3   0.551   1.246  halfPeriod<7>11 (N18)
+     LUT4:I0->O            1   0.551   0.000  Mcount_count_eqn_72 (Mcount_count_eqn_72)
+     MUXF5:I0->O           1   0.360   0.000  Mcount_count_eqn_7_f5 (Mcount_count_eqn_7)
+     FDP:D                     0.203          count_7
+    ----------------------------------------
+    Total                      9.200ns (4.038ns logic, 5.162ns route)
+                                       (43.9% logic, 56.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'osc'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              1.825ns (Levels of Logic = 1)
+  Source:            ps2Clk (PAD)
+  Destination:       ps2KeyboardInterface/ps2ClkSynchronizer/aux_0 (FF)
+  Destination Clock: osc rising
+
+  Data Path: ps2Clk to ps2KeyboardInterface/ps2ClkSynchronizer/aux_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.821   0.801  ps2Clk_IBUF (ps2Clk_IBUF)
+     FDP:D                     0.203          ps2KeyboardInterface/ps2ClkSynchronizer/aux_0
+    ----------------------------------------
+    Total                      1.825ns (1.024ns logic, 0.801ns route)
+                                       (56.1% logic, 43.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'osc'
+  Total number of paths / destination ports: 58 / 15
+-------------------------------------------------------------------------
+Offset:              9.874ns (Levels of Logic = 2)
+  Source:            code_7 (FF)
+  Destination:       leftSegs<6> (PAD)
+  Source Clock:      osc rising
+
+  Data Path: code_7 to leftSegs<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q            26   0.720   2.158  code_7 (code_7)
+     LUT4:I0->O            1   0.551   0.801  leftConverter/Mrom_bin_rom000012 (leftSegs_1_OBUF)
+     OBUF:I->O                 5.644          leftSegs_1_OBUF (leftSegs<1>)
+    ----------------------------------------
+    Total                      9.874ns (6.915ns logic, 2.959ns route)
+                                       (70.0% logic, 30.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.39 secs
+ 
+--> 
+
+Total memory usage is 4532392 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

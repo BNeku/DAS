@@ -1,0 +1,14 @@
+EN modcounter NULL //alar.fdi.ucm.es/home/47471034/DAS/Pract_02/modcounter.vhd sub00/vhpl02 1551104673
+EN edgedetector NULL //alar.fdi.ucm.es/home/47471034/DAS/common/edgedetector.vhd sub00/vhpl10 1551104671
+PB common common //alar.fdi.ucm.es/home/47471034/DAS/common/common.vhd sub00/vhpl01 1551104666
+EN bin2segs NULL //alar.fdi.ucm.es/home/47471034/DAS/common/bin2segs.vhd sub00/vhpl04 1551104675
+AR debouncer syn //alar.fdi.ucm.es/home/47471034/DAS/common/debouncer.vhd sub00/vhpl09 1551104670
+EN lab2 NULL //alar.fdi.ucm.es/home/47471034/DAS/Pract_02/lab2.vhd sub00/vhpl12 1551104677
+AR bin2segs syn //alar.fdi.ucm.es/home/47471034/DAS/common/bin2segs.vhd sub00/vhpl05 1551104676
+AR synchronizer syn //alar.fdi.ucm.es/home/47471034/DAS/common/synchronizer.vhd sub00/vhpl07 1551104668
+AR modcounter syn //alar.fdi.ucm.es/home/47471034/DAS/Pract_02/modcounter.vhd sub00/vhpl03 1551104674
+PH common NULL //alar.fdi.ucm.es/home/47471034/DAS/common/common.vhd sub00/vhpl00 1551104665
+EN synchronizer NULL //alar.fdi.ucm.es/home/47471034/DAS/common/synchronizer.vhd sub00/vhpl06 1551104667
+EN debouncer NULL //alar.fdi.ucm.es/home/47471034/DAS/common/debouncer.vhd sub00/vhpl08 1551104669
+AR edgedetector syn //alar.fdi.ucm.es/home/47471034/DAS/common/edgedetector.vhd sub00/vhpl11 1551104672
+AR lab2 syn //alar.fdi.ucm.es/home/47471034/DAS/Pract_02/lab2.vhd sub00/vhpl13 1551104678

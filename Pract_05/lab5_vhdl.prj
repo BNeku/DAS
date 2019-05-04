@@ -1,0 +1,7 @@
+vhdl work "C:\hlocal\das\common\synchronizer.vhd"
+vhdl work "C:\hlocal\das\common\common.vhd"
+vhdl work "C:\hlocal\das\common\rs232Transmitter.vhd"
+vhdl work "C:\hlocal\das\common\rs232Receiver.vhd"
+vhdl work "C:\hlocal\das\common\fifo.vhd"
+vhdl work "C:\hlocal\das\common\bin2segs.vhd"
+vhdl work "C:\hlocal\das\Pract_05\lab5.vhd"

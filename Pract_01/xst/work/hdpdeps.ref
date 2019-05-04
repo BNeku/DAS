@@ -1,0 +1,19 @@
+V3 12
+FL //alar.fdi.ucm.es/home/47471034/DAS/common/bin2segs.vhd 2019/02/12.15:23:47 P.15xf
+EN work/bin2segs 1550583543 \
+      FL //alar.fdi.ucm.es/home/47471034/DAS/common/bin2segs.vhd \
+      PB ieee/std_logic_1164 1335251622
+AR work/bin2segs/syn 1550583544 \
+      FL //alar.fdi.ucm.es/home/47471034/DAS/common/bin2segs.vhd EN work/bin2segs 1550583543
+FL //alar.fdi.ucm.es/home/47471034/DAS/common/common.vhd 2019/02/12.14:04:08 P.15xf
+PH work/common 1550583541 \
+      FL //alar.fdi.ucm.es/home/47471034/DAS/common/common.vhd \
+      PB ieee/std_logic_1164 1335251622 PB ieee/NUMERIC_STD 1335251627 CD bin2segs
+PB work/common 1550583542 \
+      FL //alar.fdi.ucm.es/home/47471034/DAS/common/common.vhd PH work/common 1550583541
+FL //alar.fdi.ucm.es/home/47471034/DAS/p1/lab1.vhd 2019/02/19.14:38:51 P.15xf
+EN work/lab1 1550583545 FL //alar.fdi.ucm.es/home/47471034/DAS/p1/lab1.vhd \
+      PB ieee/std_logic_1164 1335251622
+AR work/lab1/syn 1550583546 \
+      FL //alar.fdi.ucm.es/home/47471034/DAS/p1/lab1.vhd EN work/lab1 1550583545 \
+      PB ieee/NUMERIC_STD 1335251627 PB work/common 1550583542 CP with CP bin2segs

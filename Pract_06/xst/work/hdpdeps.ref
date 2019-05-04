@@ -1,0 +1,36 @@
+V3 34
+FL C:/hlocal/common/common.vhd 2019/04/08.06:54:24 P.15xf
+PH work/common 1556022384 FL C:/hlocal/common/common.vhd PB ieee/std_logic_1164 1335251622 \
+      PB ieee/NUMERIC_STD 1335251627 CD bin2segs CD synchronizer CD debouncer \
+      CD edgeDetector CD frequencySynthesizer CD ps2Receiver CD fifo \
+      CD rs232Receiver CD rs232Transmitter CD vgaInterface
+PB work/common 1556022385 \
+      FL C:/hlocal/common/common.vhd PH work/common 1556022384
+FL C:/hlocal/common/edgedetector.vhd 2019/04/01.06:18:18 P.15xf
+EN work/edgeDetector 1556022388 FL C:/hlocal/common/edgedetector.vhd \
+      PB ieee/std_logic_1164 1335251622
+AR work/edgeDetector/syn 1556022389 \
+      FL C:/hlocal/common/edgedetector.vhd EN work/edgeDetector 1556022388
+FL C:/hlocal/common/ps2receiver.vhd 2019/04/11.16:30:03 P.15xf
+EN work/ps2Receiver 1556022390 FL C:/hlocal/common/ps2receiver.vhd \
+      PB ieee/std_logic_1164 1335251622
+AR work/ps2Receiver/syn 1556022391 \
+      FL C:/hlocal/common/ps2receiver.vhd EN work/ps2Receiver 1556022390 \
+      PB work/common 1556022385 CP synchronizer CP edgeDetector CP parityOK \
+      CP lastBit
+FL C:/hlocal/common/synchronizer.vhd 2019/04/01.06:18:26 P.15xf
+EN work/synchronizer 1556022386 FL C:/hlocal/common/synchronizer.vhd \
+      PB ieee/std_logic_1164 1335251622
+AR work/synchronizer/syn 1556022387 \
+      FL C:/hlocal/common/synchronizer.vhd EN work/synchronizer 1556022386
+FL C:/hlocal/common/vgaInterface.vhd 2019/04/08.06:54:22 P.15xf
+EN work/vgaInterface 1556022392 FL C:/hlocal/common/vgaInterface.vhd \
+      PB ieee/std_logic_1164 1335251622
+AR work/vgaInterface/syn 1556022393 \
+      FL C:/hlocal/common/vgaInterface.vhd EN work/vgaInterface 1556022392 \
+      PB ieee/NUMERIC_STD 1335251627
+FL C:/hlocal/Pract_06/lab6.vhd 2019/04/23.14:26:21 P.15xf
+EN work/lab6 1556022394 FL C:/hlocal/Pract_06/lab6.vhd PB ieee/std_logic_1164 1335251622
+AR work/lab6/syn 1556022395 \
+      FL C:/hlocal/Pract_06/lab6.vhd EN work/lab6 1556022394 PB ieee/NUMERIC_STD 1335251627 \
+      PB work/common 1556022385 CP synchronizer CP ps2Receiver CP vgaInterface

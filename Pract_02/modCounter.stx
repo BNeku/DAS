@@ -1,0 +1,38 @@
+Release 14.1 - xst P.15xf (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to Z:/DAS/Pract_02/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to Z:/DAS/Pract_02/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "//alar.fdi.ucm.es/home/47471034/DAS/common/common.vhd" in Library work.
+Package <common> compiled.
+Package body <common> compiled.
+Compiling vhdl file "//alar.fdi.ucm.es/home/47471034/DAS/Pract_02/modcounter.vhd" in Library work.
+Entity <modcounter> compiled.
+Entity <modcounter> (Architecture <syn>) compiled.
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.14 secs
+ 
+--> 
+
+Total memory usage is 4495876 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

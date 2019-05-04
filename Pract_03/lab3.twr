@@ -1,0 +1,802 @@
+--------------------------------------------------------------------------------
+Release 14.1 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+C:\software\electronica\xilinx\14.1\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe
+-intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml lab3.twx lab3.ncd -o lab3.twr
+lab3.pcf -ucf lab3.ucf
+
+Design file:              lab3.ncd
+Physical constraint file: lab3.pcf
+Device,package,speed:     xc3s1000,ft256,-4 (PRODUCTION 1.39 2012-04-23)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more 
+   information, see the TSI report.  Please consult the Xilinx Command Line 
+   Tools User Guide for information on generating a TSI report.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: TSosc = PERIOD TIMEGRP "osc" 20 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   6.000ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TSosc = PERIOD TIMEGRP "osc" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 14.000ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 3.000ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: clkGenerator/clockManager/CLKIN
+  Logical resource: clkGenerator/clockManager/CLKIN
+  Location pin: DCM_X0Y0.CLKIN
+  Clock network: osc_IBUFG
+--------------------------------------------------------------------------------
+Slack: 14.000ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 3.000ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: clkGenerator/clockManager/CLKIN
+  Logical resource: clkGenerator/clockManager/CLKIN
+  Location pin: DCM_X0Y0.CLKIN
+  Clock network: osc_IBUFG
+--------------------------------------------------------------------------------
+Slack: 16.430ns (period - min period limit)
+  Period: 20.000ns
+  Min period limit: 3.570ns (280.112MHz) (Tdcmpc)
+  Physical resource: clkGenerator/clockManager/CLKIN
+  Logical resource: clkGenerator/clockManager/CLKIN
+  Location pin: DCM_X0Y0.CLKIN
+  Clock network: osc_IBUFG
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TSclk = PERIOD TIMEGRP "clk" 33 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   1.726ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TSclk = PERIOD TIMEGRP "clk" 33 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 31.274ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 33.000ns
+  Low pulse: 16.500ns
+  Low pulse limit: 0.863ns (Trpw)
+  Physical resource: state_FSM_FFd1/SR
+  Logical resource: state_FSM_FFd1/SR
+  Location pin: SLICE_X36Y22.SR
+  Clock network: resetSyncronizer/aux<1>
+--------------------------------------------------------------------------------
+Slack: 31.274ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 33.000ns
+  High pulse: 16.500ns
+  High pulse limit: 0.863ns (Trpw)
+  Physical resource: state_FSM_FFd1/SR
+  Logical resource: state_FSM_FFd1/SR
+  Location pin: SLICE_X36Y22.SR
+  Clock network: resetSyncronizer/aux<1>
+--------------------------------------------------------------------------------
+Slack: 31.274ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 33.000ns
+  Low pulse: 16.500ns
+  Low pulse limit: 0.863ns (Trpw)
+  Physical resource: state_FSM_FFd2/SR
+  Logical resource: state_FSM_FFd2/SR
+  Location pin: SLICE_X36Y23.SR
+  Clock network: resetSyncronizer/aux<1>
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_clk1 = PERIOD TIMEGRP "clk1" 33.3333333 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 1636 paths analyzed, 212 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   7.981ns.
+--------------------------------------------------------------------------------
+
+Paths for end point enterDebouncer/count_20 (SLICE_X24Y32.CIN), 83 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     25.352ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               enterSynchronizer/aux_1 (FF)
+  Destination:          enterDebouncer/count_20 (FF)
+  Requirement:          33.333ns
+  Data Path Delay:      7.823ns (Levels of Logic = 12)
+  Clock Path Skew:      -0.158ns (0.428 - 0.586)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 33.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: enterSynchronizer/aux_1 to enterDebouncer/count_20
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y38.XQ      Tcko                  0.720   enterSynchronizer/aux<1>
+                                                       enterSynchronizer/aux_1
+    SLICE_X24Y32.G4      net (fanout=24)       2.509   enterSynchronizer/aux<1>
+    SLICE_X24Y32.Y       Tilo                  0.608   enterDebouncer/count<20>
+                                                       enterDebouncer/startTimer1
+    SLICE_X24Y22.BX      net (fanout=1)        1.075   enterDebouncer/startTimer
+    SLICE_X24Y22.COUT    Tbxcy                 0.845   enterDebouncer/count<0>
+                                                       enterDebouncer/Mcount_count_cy<0>
+                                                       enterDebouncer/Mcount_count_cy<1>
+    SLICE_X24Y23.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<1>
+    SLICE_X24Y23.COUT    Tbyp                  0.120   enterDebouncer/count<2>
+                                                       enterDebouncer/Mcount_count_cy<2>
+                                                       enterDebouncer/Mcount_count_cy<3>
+    SLICE_X24Y24.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<3>
+    SLICE_X24Y24.COUT    Tbyp                  0.120   enterDebouncer/count<4>
+                                                       enterDebouncer/Mcount_count_cy<4>
+                                                       enterDebouncer/Mcount_count_cy<5>
+    SLICE_X24Y25.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<5>
+    SLICE_X24Y25.COUT    Tbyp                  0.120   enterDebouncer/count<6>
+                                                       enterDebouncer/Mcount_count_cy<6>
+                                                       enterDebouncer/Mcount_count_cy<7>
+    SLICE_X24Y26.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<7>
+    SLICE_X24Y26.COUT    Tbyp                  0.120   enterDebouncer/count<8>
+                                                       enterDebouncer/Mcount_count_cy<8>
+                                                       enterDebouncer/Mcount_count_cy<9>
+    SLICE_X24Y27.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<9>
+    SLICE_X24Y27.COUT    Tbyp                  0.120   enterDebouncer/count<10>
+                                                       enterDebouncer/Mcount_count_cy<10>
+                                                       enterDebouncer/Mcount_count_cy<11>
+    SLICE_X24Y28.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<11>
+    SLICE_X24Y28.COUT    Tbyp                  0.120   enterDebouncer/count<12>
+                                                       enterDebouncer/Mcount_count_cy<12>
+                                                       enterDebouncer/Mcount_count_cy<13>
+    SLICE_X24Y29.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<13>
+    SLICE_X24Y29.COUT    Tbyp                  0.120   enterDebouncer/count<14>
+                                                       enterDebouncer/Mcount_count_cy<14>
+                                                       enterDebouncer/Mcount_count_cy<15>
+    SLICE_X24Y30.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<15>
+    SLICE_X24Y30.COUT    Tbyp                  0.120   enterDebouncer/count<16>
+                                                       enterDebouncer/Mcount_count_cy<16>
+                                                       enterDebouncer/Mcount_count_cy<17>
+    SLICE_X24Y31.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<17>
+    SLICE_X24Y31.COUT    Tbyp                  0.120   enterDebouncer/count<18>
+                                                       enterDebouncer/Mcount_count_cy<18>
+                                                       enterDebouncer/Mcount_count_cy<19>
+    SLICE_X24Y32.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<19>
+    SLICE_X24Y32.CLK     Tcinck                0.986   enterDebouncer/count<20>
+                                                       enterDebouncer/Mcount_count_xor<20>
+                                                       enterDebouncer/count_20
+    -------------------------------------------------  ---------------------------
+    Total                                      7.823ns (4.239ns logic, 3.584ns route)
+                                                       (54.2% logic, 45.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     26.647ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               enterSynchronizer/aux_1 (FF)
+  Destination:          enterDebouncer/count_20 (FF)
+  Requirement:          33.333ns
+  Data Path Delay:      6.528ns (Levels of Logic = 11)
+  Clock Path Skew:      -0.158ns (0.428 - 0.586)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 33.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: enterSynchronizer/aux_1 to enterDebouncer/count_20
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y38.XQ      Tcko                  0.720   enterSynchronizer/aux<1>
+                                                       enterSynchronizer/aux_1
+    SLICE_X24Y22.G1      net (fanout=24)       2.646   enterSynchronizer/aux<1>
+    SLICE_X24Y22.COUT    Topcyg                1.096   enterDebouncer/count<0>
+                                                       enterDebouncer/Mcount_count_lut<1>
+                                                       enterDebouncer/Mcount_count_cy<1>
+    SLICE_X24Y23.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<1>
+    SLICE_X24Y23.COUT    Tbyp                  0.120   enterDebouncer/count<2>
+                                                       enterDebouncer/Mcount_count_cy<2>
+                                                       enterDebouncer/Mcount_count_cy<3>
+    SLICE_X24Y24.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<3>
+    SLICE_X24Y24.COUT    Tbyp                  0.120   enterDebouncer/count<4>
+                                                       enterDebouncer/Mcount_count_cy<4>
+                                                       enterDebouncer/Mcount_count_cy<5>
+    SLICE_X24Y25.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<5>
+    SLICE_X24Y25.COUT    Tbyp                  0.120   enterDebouncer/count<6>
+                                                       enterDebouncer/Mcount_count_cy<6>
+                                                       enterDebouncer/Mcount_count_cy<7>
+    SLICE_X24Y26.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<7>
+    SLICE_X24Y26.COUT    Tbyp                  0.120   enterDebouncer/count<8>
+                                                       enterDebouncer/Mcount_count_cy<8>
+                                                       enterDebouncer/Mcount_count_cy<9>
+    SLICE_X24Y27.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<9>
+    SLICE_X24Y27.COUT    Tbyp                  0.120   enterDebouncer/count<10>
+                                                       enterDebouncer/Mcount_count_cy<10>
+                                                       enterDebouncer/Mcount_count_cy<11>
+    SLICE_X24Y28.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<11>
+    SLICE_X24Y28.COUT    Tbyp                  0.120   enterDebouncer/count<12>
+                                                       enterDebouncer/Mcount_count_cy<12>
+                                                       enterDebouncer/Mcount_count_cy<13>
+    SLICE_X24Y29.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<13>
+    SLICE_X24Y29.COUT    Tbyp                  0.120   enterDebouncer/count<14>
+                                                       enterDebouncer/Mcount_count_cy<14>
+                                                       enterDebouncer/Mcount_count_cy<15>
+    SLICE_X24Y30.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<15>
+    SLICE_X24Y30.COUT    Tbyp                  0.120   enterDebouncer/count<16>
+                                                       enterDebouncer/Mcount_count_cy<16>
+                                                       enterDebouncer/Mcount_count_cy<17>
+    SLICE_X24Y31.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<17>
+    SLICE_X24Y31.COUT    Tbyp                  0.120   enterDebouncer/count<18>
+                                                       enterDebouncer/Mcount_count_cy<18>
+                                                       enterDebouncer/Mcount_count_cy<19>
+    SLICE_X24Y32.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<19>
+    SLICE_X24Y32.CLK     Tcinck                0.986   enterDebouncer/count<20>
+                                                       enterDebouncer/Mcount_count_xor<20>
+                                                       enterDebouncer/count_20
+    -------------------------------------------------  ---------------------------
+    Total                                      6.528ns (3.882ns logic, 2.646ns route)
+                                                       (59.5% logic, 40.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     26.854ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               enterSynchronizer/aux_1 (FF)
+  Destination:          enterDebouncer/count_20 (FF)
+  Requirement:          33.333ns
+  Data Path Delay:      6.321ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.158ns (0.428 - 0.586)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 33.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: enterSynchronizer/aux_1 to enterDebouncer/count_20
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y38.XQ      Tcko                  0.720   enterSynchronizer/aux<1>
+                                                       enterSynchronizer/aux_1
+    SLICE_X24Y27.G1      net (fanout=24)       3.039   enterSynchronizer/aux<1>
+    SLICE_X24Y27.COUT    Topcyg                1.096   enterDebouncer/count<10>
+                                                       enterDebouncer/Mcount_count_lut<11>
+                                                       enterDebouncer/Mcount_count_cy<11>
+    SLICE_X24Y28.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<11>
+    SLICE_X24Y28.COUT    Tbyp                  0.120   enterDebouncer/count<12>
+                                                       enterDebouncer/Mcount_count_cy<12>
+                                                       enterDebouncer/Mcount_count_cy<13>
+    SLICE_X24Y29.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<13>
+    SLICE_X24Y29.COUT    Tbyp                  0.120   enterDebouncer/count<14>
+                                                       enterDebouncer/Mcount_count_cy<14>
+                                                       enterDebouncer/Mcount_count_cy<15>
+    SLICE_X24Y30.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<15>
+    SLICE_X24Y30.COUT    Tbyp                  0.120   enterDebouncer/count<16>
+                                                       enterDebouncer/Mcount_count_cy<16>
+                                                       enterDebouncer/Mcount_count_cy<17>
+    SLICE_X24Y31.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<17>
+    SLICE_X24Y31.COUT    Tbyp                  0.120   enterDebouncer/count<18>
+                                                       enterDebouncer/Mcount_count_cy<18>
+                                                       enterDebouncer/Mcount_count_cy<19>
+    SLICE_X24Y32.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<19>
+    SLICE_X24Y32.CLK     Tcinck                0.986   enterDebouncer/count<20>
+                                                       enterDebouncer/Mcount_count_xor<20>
+                                                       enterDebouncer/count_20
+    -------------------------------------------------  ---------------------------
+    Total                                      6.321ns (3.282ns logic, 3.039ns route)
+                                                       (51.9% logic, 48.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point enterDebouncer/count_19 (SLICE_X24Y31.CIN), 75 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     25.460ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               enterSynchronizer/aux_1 (FF)
+  Destination:          enterDebouncer/count_19 (FF)
+  Requirement:          33.333ns
+  Data Path Delay:      7.722ns (Levels of Logic = 11)
+  Clock Path Skew:      -0.151ns (0.435 - 0.586)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 33.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: enterSynchronizer/aux_1 to enterDebouncer/count_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y38.XQ      Tcko                  0.720   enterSynchronizer/aux<1>
+                                                       enterSynchronizer/aux_1
+    SLICE_X24Y32.G4      net (fanout=24)       2.509   enterSynchronizer/aux<1>
+    SLICE_X24Y32.Y       Tilo                  0.608   enterDebouncer/count<20>
+                                                       enterDebouncer/startTimer1
+    SLICE_X24Y22.BX      net (fanout=1)        1.075   enterDebouncer/startTimer
+    SLICE_X24Y22.COUT    Tbxcy                 0.845   enterDebouncer/count<0>
+                                                       enterDebouncer/Mcount_count_cy<0>
+                                                       enterDebouncer/Mcount_count_cy<1>
+    SLICE_X24Y23.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<1>
+    SLICE_X24Y23.COUT    Tbyp                  0.120   enterDebouncer/count<2>
+                                                       enterDebouncer/Mcount_count_cy<2>
+                                                       enterDebouncer/Mcount_count_cy<3>
+    SLICE_X24Y24.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<3>
+    SLICE_X24Y24.COUT    Tbyp                  0.120   enterDebouncer/count<4>
+                                                       enterDebouncer/Mcount_count_cy<4>
+                                                       enterDebouncer/Mcount_count_cy<5>
+    SLICE_X24Y25.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<5>
+    SLICE_X24Y25.COUT    Tbyp                  0.120   enterDebouncer/count<6>
+                                                       enterDebouncer/Mcount_count_cy<6>
+                                                       enterDebouncer/Mcount_count_cy<7>
+    SLICE_X24Y26.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<7>
+    SLICE_X24Y26.COUT    Tbyp                  0.120   enterDebouncer/count<8>
+                                                       enterDebouncer/Mcount_count_cy<8>
+                                                       enterDebouncer/Mcount_count_cy<9>
+    SLICE_X24Y27.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<9>
+    SLICE_X24Y27.COUT    Tbyp                  0.120   enterDebouncer/count<10>
+                                                       enterDebouncer/Mcount_count_cy<10>
+                                                       enterDebouncer/Mcount_count_cy<11>
+    SLICE_X24Y28.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<11>
+    SLICE_X24Y28.COUT    Tbyp                  0.120   enterDebouncer/count<12>
+                                                       enterDebouncer/Mcount_count_cy<12>
+                                                       enterDebouncer/Mcount_count_cy<13>
+    SLICE_X24Y29.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<13>
+    SLICE_X24Y29.COUT    Tbyp                  0.120   enterDebouncer/count<14>
+                                                       enterDebouncer/Mcount_count_cy<14>
+                                                       enterDebouncer/Mcount_count_cy<15>
+    SLICE_X24Y30.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<15>
+    SLICE_X24Y30.COUT    Tbyp                  0.120   enterDebouncer/count<16>
+                                                       enterDebouncer/Mcount_count_cy<16>
+                                                       enterDebouncer/Mcount_count_cy<17>
+    SLICE_X24Y31.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<17>
+    SLICE_X24Y31.CLK     Tcinck                1.005   enterDebouncer/count<18>
+                                                       enterDebouncer/Mcount_count_cy<18>
+                                                       enterDebouncer/Mcount_count_xor<19>
+                                                       enterDebouncer/count_19
+    -------------------------------------------------  ---------------------------
+    Total                                      7.722ns (4.138ns logic, 3.584ns route)
+                                                       (53.6% logic, 46.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     26.755ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               enterSynchronizer/aux_1 (FF)
+  Destination:          enterDebouncer/count_19 (FF)
+  Requirement:          33.333ns
+  Data Path Delay:      6.427ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.151ns (0.435 - 0.586)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 33.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: enterSynchronizer/aux_1 to enterDebouncer/count_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y38.XQ      Tcko                  0.720   enterSynchronizer/aux<1>
+                                                       enterSynchronizer/aux_1
+    SLICE_X24Y22.G1      net (fanout=24)       2.646   enterSynchronizer/aux<1>
+    SLICE_X24Y22.COUT    Topcyg                1.096   enterDebouncer/count<0>
+                                                       enterDebouncer/Mcount_count_lut<1>
+                                                       enterDebouncer/Mcount_count_cy<1>
+    SLICE_X24Y23.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<1>
+    SLICE_X24Y23.COUT    Tbyp                  0.120   enterDebouncer/count<2>
+                                                       enterDebouncer/Mcount_count_cy<2>
+                                                       enterDebouncer/Mcount_count_cy<3>
+    SLICE_X24Y24.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<3>
+    SLICE_X24Y24.COUT    Tbyp                  0.120   enterDebouncer/count<4>
+                                                       enterDebouncer/Mcount_count_cy<4>
+                                                       enterDebouncer/Mcount_count_cy<5>
+    SLICE_X24Y25.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<5>
+    SLICE_X24Y25.COUT    Tbyp                  0.120   enterDebouncer/count<6>
+                                                       enterDebouncer/Mcount_count_cy<6>
+                                                       enterDebouncer/Mcount_count_cy<7>
+    SLICE_X24Y26.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<7>
+    SLICE_X24Y26.COUT    Tbyp                  0.120   enterDebouncer/count<8>
+                                                       enterDebouncer/Mcount_count_cy<8>
+                                                       enterDebouncer/Mcount_count_cy<9>
+    SLICE_X24Y27.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<9>
+    SLICE_X24Y27.COUT    Tbyp                  0.120   enterDebouncer/count<10>
+                                                       enterDebouncer/Mcount_count_cy<10>
+                                                       enterDebouncer/Mcount_count_cy<11>
+    SLICE_X24Y28.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<11>
+    SLICE_X24Y28.COUT    Tbyp                  0.120   enterDebouncer/count<12>
+                                                       enterDebouncer/Mcount_count_cy<12>
+                                                       enterDebouncer/Mcount_count_cy<13>
+    SLICE_X24Y29.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<13>
+    SLICE_X24Y29.COUT    Tbyp                  0.120   enterDebouncer/count<14>
+                                                       enterDebouncer/Mcount_count_cy<14>
+                                                       enterDebouncer/Mcount_count_cy<15>
+    SLICE_X24Y30.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<15>
+    SLICE_X24Y30.COUT    Tbyp                  0.120   enterDebouncer/count<16>
+                                                       enterDebouncer/Mcount_count_cy<16>
+                                                       enterDebouncer/Mcount_count_cy<17>
+    SLICE_X24Y31.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<17>
+    SLICE_X24Y31.CLK     Tcinck                1.005   enterDebouncer/count<18>
+                                                       enterDebouncer/Mcount_count_cy<18>
+                                                       enterDebouncer/Mcount_count_xor<19>
+                                                       enterDebouncer/count_19
+    -------------------------------------------------  ---------------------------
+    Total                                      6.427ns (3.781ns logic, 2.646ns route)
+                                                       (58.8% logic, 41.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     26.962ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               enterSynchronizer/aux_1 (FF)
+  Destination:          enterDebouncer/count_19 (FF)
+  Requirement:          33.333ns
+  Data Path Delay:      6.220ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.151ns (0.435 - 0.586)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 33.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: enterSynchronizer/aux_1 to enterDebouncer/count_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y38.XQ      Tcko                  0.720   enterSynchronizer/aux<1>
+                                                       enterSynchronizer/aux_1
+    SLICE_X24Y27.G1      net (fanout=24)       3.039   enterSynchronizer/aux<1>
+    SLICE_X24Y27.COUT    Topcyg                1.096   enterDebouncer/count<10>
+                                                       enterDebouncer/Mcount_count_lut<11>
+                                                       enterDebouncer/Mcount_count_cy<11>
+    SLICE_X24Y28.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<11>
+    SLICE_X24Y28.COUT    Tbyp                  0.120   enterDebouncer/count<12>
+                                                       enterDebouncer/Mcount_count_cy<12>
+                                                       enterDebouncer/Mcount_count_cy<13>
+    SLICE_X24Y29.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<13>
+    SLICE_X24Y29.COUT    Tbyp                  0.120   enterDebouncer/count<14>
+                                                       enterDebouncer/Mcount_count_cy<14>
+                                                       enterDebouncer/Mcount_count_cy<15>
+    SLICE_X24Y30.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<15>
+    SLICE_X24Y30.COUT    Tbyp                  0.120   enterDebouncer/count<16>
+                                                       enterDebouncer/Mcount_count_cy<16>
+                                                       enterDebouncer/Mcount_count_cy<17>
+    SLICE_X24Y31.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<17>
+    SLICE_X24Y31.CLK     Tcinck                1.005   enterDebouncer/count<18>
+                                                       enterDebouncer/Mcount_count_cy<18>
+                                                       enterDebouncer/Mcount_count_xor<19>
+                                                       enterDebouncer/count_19
+    -------------------------------------------------  ---------------------------
+    Total                                      6.220ns (3.181ns logic, 3.039ns route)
+                                                       (51.1% logic, 48.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point enterDebouncer/count_18 (SLICE_X24Y31.CIN), 75 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     25.479ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               enterSynchronizer/aux_1 (FF)
+  Destination:          enterDebouncer/count_18 (FF)
+  Requirement:          33.333ns
+  Data Path Delay:      7.703ns (Levels of Logic = 11)
+  Clock Path Skew:      -0.151ns (0.435 - 0.586)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 33.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: enterSynchronizer/aux_1 to enterDebouncer/count_18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y38.XQ      Tcko                  0.720   enterSynchronizer/aux<1>
+                                                       enterSynchronizer/aux_1
+    SLICE_X24Y32.G4      net (fanout=24)       2.509   enterSynchronizer/aux<1>
+    SLICE_X24Y32.Y       Tilo                  0.608   enterDebouncer/count<20>
+                                                       enterDebouncer/startTimer1
+    SLICE_X24Y22.BX      net (fanout=1)        1.075   enterDebouncer/startTimer
+    SLICE_X24Y22.COUT    Tbxcy                 0.845   enterDebouncer/count<0>
+                                                       enterDebouncer/Mcount_count_cy<0>
+                                                       enterDebouncer/Mcount_count_cy<1>
+    SLICE_X24Y23.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<1>
+    SLICE_X24Y23.COUT    Tbyp                  0.120   enterDebouncer/count<2>
+                                                       enterDebouncer/Mcount_count_cy<2>
+                                                       enterDebouncer/Mcount_count_cy<3>
+    SLICE_X24Y24.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<3>
+    SLICE_X24Y24.COUT    Tbyp                  0.120   enterDebouncer/count<4>
+                                                       enterDebouncer/Mcount_count_cy<4>
+                                                       enterDebouncer/Mcount_count_cy<5>
+    SLICE_X24Y25.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<5>
+    SLICE_X24Y25.COUT    Tbyp                  0.120   enterDebouncer/count<6>
+                                                       enterDebouncer/Mcount_count_cy<6>
+                                                       enterDebouncer/Mcount_count_cy<7>
+    SLICE_X24Y26.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<7>
+    SLICE_X24Y26.COUT    Tbyp                  0.120   enterDebouncer/count<8>
+                                                       enterDebouncer/Mcount_count_cy<8>
+                                                       enterDebouncer/Mcount_count_cy<9>
+    SLICE_X24Y27.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<9>
+    SLICE_X24Y27.COUT    Tbyp                  0.120   enterDebouncer/count<10>
+                                                       enterDebouncer/Mcount_count_cy<10>
+                                                       enterDebouncer/Mcount_count_cy<11>
+    SLICE_X24Y28.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<11>
+    SLICE_X24Y28.COUT    Tbyp                  0.120   enterDebouncer/count<12>
+                                                       enterDebouncer/Mcount_count_cy<12>
+                                                       enterDebouncer/Mcount_count_cy<13>
+    SLICE_X24Y29.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<13>
+    SLICE_X24Y29.COUT    Tbyp                  0.120   enterDebouncer/count<14>
+                                                       enterDebouncer/Mcount_count_cy<14>
+                                                       enterDebouncer/Mcount_count_cy<15>
+    SLICE_X24Y30.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<15>
+    SLICE_X24Y30.COUT    Tbyp                  0.120   enterDebouncer/count<16>
+                                                       enterDebouncer/Mcount_count_cy<16>
+                                                       enterDebouncer/Mcount_count_cy<17>
+    SLICE_X24Y31.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<17>
+    SLICE_X24Y31.CLK     Tcinck                0.986   enterDebouncer/count<18>
+                                                       enterDebouncer/Mcount_count_xor<18>
+                                                       enterDebouncer/count_18
+    -------------------------------------------------  ---------------------------
+    Total                                      7.703ns (4.119ns logic, 3.584ns route)
+                                                       (53.5% logic, 46.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     26.774ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               enterSynchronizer/aux_1 (FF)
+  Destination:          enterDebouncer/count_18 (FF)
+  Requirement:          33.333ns
+  Data Path Delay:      6.408ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.151ns (0.435 - 0.586)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 33.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: enterSynchronizer/aux_1 to enterDebouncer/count_18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y38.XQ      Tcko                  0.720   enterSynchronizer/aux<1>
+                                                       enterSynchronizer/aux_1
+    SLICE_X24Y22.G1      net (fanout=24)       2.646   enterSynchronizer/aux<1>
+    SLICE_X24Y22.COUT    Topcyg                1.096   enterDebouncer/count<0>
+                                                       enterDebouncer/Mcount_count_lut<1>
+                                                       enterDebouncer/Mcount_count_cy<1>
+    SLICE_X24Y23.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<1>
+    SLICE_X24Y23.COUT    Tbyp                  0.120   enterDebouncer/count<2>
+                                                       enterDebouncer/Mcount_count_cy<2>
+                                                       enterDebouncer/Mcount_count_cy<3>
+    SLICE_X24Y24.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<3>
+    SLICE_X24Y24.COUT    Tbyp                  0.120   enterDebouncer/count<4>
+                                                       enterDebouncer/Mcount_count_cy<4>
+                                                       enterDebouncer/Mcount_count_cy<5>
+    SLICE_X24Y25.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<5>
+    SLICE_X24Y25.COUT    Tbyp                  0.120   enterDebouncer/count<6>
+                                                       enterDebouncer/Mcount_count_cy<6>
+                                                       enterDebouncer/Mcount_count_cy<7>
+    SLICE_X24Y26.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<7>
+    SLICE_X24Y26.COUT    Tbyp                  0.120   enterDebouncer/count<8>
+                                                       enterDebouncer/Mcount_count_cy<8>
+                                                       enterDebouncer/Mcount_count_cy<9>
+    SLICE_X24Y27.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<9>
+    SLICE_X24Y27.COUT    Tbyp                  0.120   enterDebouncer/count<10>
+                                                       enterDebouncer/Mcount_count_cy<10>
+                                                       enterDebouncer/Mcount_count_cy<11>
+    SLICE_X24Y28.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<11>
+    SLICE_X24Y28.COUT    Tbyp                  0.120   enterDebouncer/count<12>
+                                                       enterDebouncer/Mcount_count_cy<12>
+                                                       enterDebouncer/Mcount_count_cy<13>
+    SLICE_X24Y29.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<13>
+    SLICE_X24Y29.COUT    Tbyp                  0.120   enterDebouncer/count<14>
+                                                       enterDebouncer/Mcount_count_cy<14>
+                                                       enterDebouncer/Mcount_count_cy<15>
+    SLICE_X24Y30.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<15>
+    SLICE_X24Y30.COUT    Tbyp                  0.120   enterDebouncer/count<16>
+                                                       enterDebouncer/Mcount_count_cy<16>
+                                                       enterDebouncer/Mcount_count_cy<17>
+    SLICE_X24Y31.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<17>
+    SLICE_X24Y31.CLK     Tcinck                0.986   enterDebouncer/count<18>
+                                                       enterDebouncer/Mcount_count_xor<18>
+                                                       enterDebouncer/count_18
+    -------------------------------------------------  ---------------------------
+    Total                                      6.408ns (3.762ns logic, 2.646ns route)
+                                                       (58.7% logic, 41.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     26.981ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               enterSynchronizer/aux_1 (FF)
+  Destination:          enterDebouncer/count_18 (FF)
+  Requirement:          33.333ns
+  Data Path Delay:      6.201ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.151ns (0.435 - 0.586)
+  Source Clock:         clk rising at 0.000ns
+  Destination Clock:    clk rising at 33.333ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: enterSynchronizer/aux_1 to enterDebouncer/count_18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X12Y38.XQ      Tcko                  0.720   enterSynchronizer/aux<1>
+                                                       enterSynchronizer/aux_1
+    SLICE_X24Y27.G1      net (fanout=24)       3.039   enterSynchronizer/aux<1>
+    SLICE_X24Y27.COUT    Topcyg                1.096   enterDebouncer/count<10>
+                                                       enterDebouncer/Mcount_count_lut<11>
+                                                       enterDebouncer/Mcount_count_cy<11>
+    SLICE_X24Y28.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<11>
+    SLICE_X24Y28.COUT    Tbyp                  0.120   enterDebouncer/count<12>
+                                                       enterDebouncer/Mcount_count_cy<12>
+                                                       enterDebouncer/Mcount_count_cy<13>
+    SLICE_X24Y29.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<13>
+    SLICE_X24Y29.COUT    Tbyp                  0.120   enterDebouncer/count<14>
+                                                       enterDebouncer/Mcount_count_cy<14>
+                                                       enterDebouncer/Mcount_count_cy<15>
+    SLICE_X24Y30.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<15>
+    SLICE_X24Y30.COUT    Tbyp                  0.120   enterDebouncer/count<16>
+                                                       enterDebouncer/Mcount_count_cy<16>
+                                                       enterDebouncer/Mcount_count_cy<17>
+    SLICE_X24Y31.CIN     net (fanout=1)        0.000   enterDebouncer/Mcount_count_cy<17>
+    SLICE_X24Y31.CLK     Tcinck                0.986   enterDebouncer/count<18>
+                                                       enterDebouncer/Mcount_count_xor<18>
+                                                       enterDebouncer/count_18
+    -------------------------------------------------  ---------------------------
+    Total                                      6.201ns (3.162ns logic, 3.039ns route)
+                                                       (51.0% logic, 49.0% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clk1 = PERIOD TIMEGRP "clk1" 33.3333333 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point switchesSynchronizer[7].switchsynchronizer/aux_1 (SLICE_X33Y20.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.806ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               switchesSynchronizer[7].switchsynchronizer/aux_0 (FF)
+  Destination:          switchesSynchronizer[7].switchsynchronizer/aux_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.806ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk rising at 33.333ns
+  Destination Clock:    clk rising at 33.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: switchesSynchronizer[7].switchsynchronizer/aux_0 to switchesSynchronizer[7].switchsynchronizer/aux_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y20.YQ      Tcko                  0.576   switchesSynchronizer[7].switchsynchronizer/aux<1>
+                                                       switchesSynchronizer[7].switchsynchronizer/aux_0
+    SLICE_X33Y20.BX      net (fanout=1)        0.513   switchesSynchronizer[7].switchsynchronizer/aux<0>
+    SLICE_X33Y20.CLK     Tckdi       (-Th)     0.283   switchesSynchronizer[7].switchsynchronizer/aux<1>
+                                                       switchesSynchronizer[7].switchsynchronizer/aux_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.806ns (0.293ns logic, 0.513ns route)
+                                                       (36.4% logic, 63.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point switchesSynchronizer[2].switchsynchronizer/aux_1 (SLICE_X55Y34.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.806ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               switchesSynchronizer[2].switchsynchronizer/aux_0 (FF)
+  Destination:          switchesSynchronizer[2].switchsynchronizer/aux_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.806ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk rising at 33.333ns
+  Destination Clock:    clk rising at 33.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: switchesSynchronizer[2].switchsynchronizer/aux_0 to switchesSynchronizer[2].switchsynchronizer/aux_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X55Y34.YQ      Tcko                  0.576   switchesSynchronizer[2].switchsynchronizer/aux<1>
+                                                       switchesSynchronizer[2].switchsynchronizer/aux_0
+    SLICE_X55Y34.BX      net (fanout=1)        0.513   switchesSynchronizer[2].switchsynchronizer/aux<0>
+    SLICE_X55Y34.CLK     Tckdi       (-Th)     0.283   switchesSynchronizer[2].switchsynchronizer/aux<1>
+                                                       switchesSynchronizer[2].switchsynchronizer/aux_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.806ns (0.293ns logic, 0.513ns route)
+                                                       (36.4% logic, 63.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point switchesSynchronizer[3].switchsynchronizer/aux_1 (SLICE_X21Y38.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.806ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               switchesSynchronizer[3].switchsynchronizer/aux_0 (FF)
+  Destination:          switchesSynchronizer[3].switchsynchronizer/aux_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.806ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk rising at 33.333ns
+  Destination Clock:    clk rising at 33.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: switchesSynchronizer[3].switchsynchronizer/aux_0 to switchesSynchronizer[3].switchsynchronizer/aux_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X21Y38.YQ      Tcko                  0.576   switchesSynchronizer[3].switchsynchronizer/aux<1>
+                                                       switchesSynchronizer[3].switchsynchronizer/aux_0
+    SLICE_X21Y38.BX      net (fanout=1)        0.513   switchesSynchronizer[3].switchsynchronizer/aux<0>
+    SLICE_X21Y38.CLK     Tckdi       (-Th)     0.283   switchesSynchronizer[3].switchsynchronizer/aux<1>
+                                                       switchesSynchronizer[3].switchsynchronizer/aux_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.806ns (0.293ns logic, 0.513ns route)
+                                                       (36.4% logic, 63.6% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk1 = PERIOD TIMEGRP "clk1" 33.3333333 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 31.607ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 33.333ns
+  Low pulse: 16.666ns
+  Low pulse limit: 0.863ns (Trpw)
+  Physical resource: state_FSM_FFd1/SR
+  Logical resource: state_FSM_FFd1/SR
+  Location pin: SLICE_X36Y22.SR
+  Clock network: resetSyncronizer/aux<1>
+--------------------------------------------------------------------------------
+Slack: 31.607ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 33.333ns
+  High pulse: 16.666ns
+  High pulse limit: 0.863ns (Trpw)
+  Physical resource: state_FSM_FFd1/SR
+  Logical resource: state_FSM_FFd1/SR
+  Location pin: SLICE_X36Y22.SR
+  Clock network: resetSyncronizer/aux<1>
+--------------------------------------------------------------------------------
+Slack: 31.607ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 33.333ns
+  Low pulse: 16.666ns
+  Low pulse limit: 0.863ns (Trpw)
+  Physical resource: state_FSM_FFd2/SR
+  Logical resource: state_FSM_FFd2/SR
+  Location pin: SLICE_X36Y23.SR
+  Clock network: resetSyncronizer/aux<1>
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock osc
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+osc            |    7.981|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 1636 paths, 0 nets, and 248 connections
+
+Design statistics:
+   Minimum period:   7.981ns{1}   (Maximum frequency: 125.298MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Mon Mar 04 15:29:40 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4528 MB
+
+
+

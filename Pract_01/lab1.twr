@@ -1,0 +1,220 @@
+--------------------------------------------------------------------------------
+Release 14.1 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+C:\software\electronica\xilinx\14.1\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe
+-intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml lab1.twx lab1.ncd -o lab1.twr
+lab1.pcf -ucf lab1.ucf
+
+Design file:              lab1.ncd
+Physical constraint file: lab1.pcf
+Device,package,speed:     xc3s1000,ft256,-4 (PRODUCTION 1.39 2012-04-23)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+pbs_n<0>       |leftSegs<0>    |   24.135|
+pbs_n<0>       |leftSegs<1>    |   23.666|
+pbs_n<0>       |leftSegs<2>    |   23.450|
+pbs_n<0>       |leftSegs<3>    |   23.982|
+pbs_n<0>       |leftSegs<4>    |   24.913|
+pbs_n<0>       |leftSegs<5>    |   24.122|
+pbs_n<0>       |leftSegs<6>    |   23.278|
+pbs_n<0>       |rightSegs<0>   |   20.563|
+pbs_n<0>       |rightSegs<1>   |   20.104|
+pbs_n<0>       |rightSegs<2>   |   20.428|
+pbs_n<0>       |rightSegs<3>   |   20.936|
+pbs_n<0>       |rightSegs<4>   |   20.900|
+pbs_n<0>       |rightSegs<5>   |   21.340|
+pbs_n<0>       |rightSegs<6>   |   21.332|
+pbs_n<0>       |upSegs<2>      |   15.085|
+pbs_n<0>       |upSegs<3>      |   18.915|
+pbs_n<0>       |upSegs<4>      |   17.999|
+pbs_n<0>       |upSegs<5>      |   17.782|
+pbs_n<0>       |upSegs<6>      |   18.117|
+pbs_n<1>       |leftSegs<0>    |   22.175|
+pbs_n<1>       |leftSegs<1>    |   21.706|
+pbs_n<1>       |leftSegs<2>    |   21.490|
+pbs_n<1>       |leftSegs<3>    |   22.022|
+pbs_n<1>       |leftSegs<4>    |   22.953|
+pbs_n<1>       |leftSegs<5>    |   22.162|
+pbs_n<1>       |leftSegs<6>    |   21.318|
+pbs_n<1>       |rightSegs<0>   |   18.603|
+pbs_n<1>       |rightSegs<1>   |   18.144|
+pbs_n<1>       |rightSegs<2>   |   18.468|
+pbs_n<1>       |rightSegs<3>   |   18.976|
+pbs_n<1>       |rightSegs<4>   |   18.940|
+pbs_n<1>       |rightSegs<5>   |   19.380|
+pbs_n<1>       |rightSegs<6>   |   19.372|
+pbs_n<1>       |upSegs<0>      |   10.768|
+pbs_n<1>       |upSegs<1>      |   12.149|
+pbs_n<1>       |upSegs<2>      |   14.303|
+pbs_n<1>       |upSegs<3>      |   14.017|
+pbs_n<1>       |upSegs<4>      |   12.902|
+pbs_n<1>       |upSegs<5>      |   12.884|
+pbs_n<1>       |upSegs<6>      |   13.219|
+switches_n<0>  |leds<0>        |   14.567|
+switches_n<0>  |leftSegs<0>    |   24.454|
+switches_n<0>  |leftSegs<1>    |   23.985|
+switches_n<0>  |leftSegs<2>    |   23.769|
+switches_n<0>  |leftSegs<3>    |   24.155|
+switches_n<0>  |leftSegs<4>    |   25.086|
+switches_n<0>  |leftSegs<5>    |   24.295|
+switches_n<0>  |leftSegs<6>    |   23.507|
+switches_n<0>  |rightSegs<0>   |   22.471|
+switches_n<0>  |rightSegs<1>   |   23.036|
+switches_n<0>  |rightSegs<2>   |   22.573|
+switches_n<0>  |rightSegs<3>   |   23.081|
+switches_n<0>  |rightSegs<4>   |   23.130|
+switches_n<0>  |rightSegs<5>   |   23.178|
+switches_n<0>  |rightSegs<6>   |   23.418|
+switches_n<1>  |leds<1>        |   13.037|
+switches_n<1>  |leftSegs<0>    |   23.419|
+switches_n<1>  |leftSegs<1>    |   22.950|
+switches_n<1>  |leftSegs<2>    |   22.734|
+switches_n<1>  |leftSegs<3>    |   23.120|
+switches_n<1>  |leftSegs<4>    |   24.051|
+switches_n<1>  |leftSegs<5>    |   23.260|
+switches_n<1>  |leftSegs<6>    |   22.472|
+switches_n<1>  |rightSegs<0>   |   21.359|
+switches_n<1>  |rightSegs<1>   |   20.982|
+switches_n<1>  |rightSegs<2>   |   21.538|
+switches_n<1>  |rightSegs<3>   |   22.046|
+switches_n<1>  |rightSegs<4>   |   22.095|
+switches_n<1>  |rightSegs<5>   |   22.060|
+switches_n<1>  |rightSegs<6>   |   21.787|
+switches_n<2>  |leds<2>        |   12.924|
+switches_n<2>  |leftSegs<0>    |   23.182|
+switches_n<2>  |leftSegs<1>    |   22.713|
+switches_n<2>  |leftSegs<2>    |   22.497|
+switches_n<2>  |leftSegs<3>    |   22.883|
+switches_n<2>  |leftSegs<4>    |   23.814|
+switches_n<2>  |leftSegs<5>    |   23.023|
+switches_n<2>  |leftSegs<6>    |   22.235|
+switches_n<2>  |rightSegs<0>   |   20.798|
+switches_n<2>  |rightSegs<1>   |   20.502|
+switches_n<2>  |rightSegs<2>   |   20.724|
+switches_n<2>  |rightSegs<3>   |   21.232|
+switches_n<2>  |rightSegs<4>   |   21.190|
+switches_n<2>  |rightSegs<5>   |   21.590|
+switches_n<2>  |rightSegs<6>   |   21.267|
+switches_n<3>  |leds<3>        |   11.919|
+switches_n<3>  |leftSegs<0>    |   22.181|
+switches_n<3>  |leftSegs<1>    |   21.712|
+switches_n<3>  |leftSegs<2>    |   21.496|
+switches_n<3>  |leftSegs<3>    |   21.882|
+switches_n<3>  |leftSegs<4>    |   22.813|
+switches_n<3>  |leftSegs<5>    |   22.022|
+switches_n<3>  |leftSegs<6>    |   21.234|
+switches_n<3>  |rightSegs<0>   |   19.317|
+switches_n<3>  |rightSegs<1>   |   18.858|
+switches_n<3>  |rightSegs<2>   |   19.182|
+switches_n<3>  |rightSegs<3>   |   19.690|
+switches_n<3>  |rightSegs<4>   |   19.654|
+switches_n<3>  |rightSegs<5>   |   20.094|
+switches_n<3>  |rightSegs<6>   |   20.086|
+switches_n<4>  |leds<4>        |   13.408|
+switches_n<4>  |leftSegs<0>    |   22.771|
+switches_n<4>  |leftSegs<1>    |   22.302|
+switches_n<4>  |leftSegs<2>    |   22.086|
+switches_n<4>  |leftSegs<3>    |   22.472|
+switches_n<4>  |leftSegs<4>    |   23.403|
+switches_n<4>  |leftSegs<5>    |   22.612|
+switches_n<4>  |leftSegs<6>    |   21.824|
+switches_n<4>  |rightSegs<0>   |   20.788|
+switches_n<4>  |rightSegs<1>   |   21.353|
+switches_n<4>  |rightSegs<2>   |   20.890|
+switches_n<4>  |rightSegs<3>   |   21.398|
+switches_n<4>  |rightSegs<4>   |   21.447|
+switches_n<4>  |rightSegs<5>   |   21.495|
+switches_n<4>  |rightSegs<6>   |   21.735|
+switches_n<5>  |leds<5>        |   14.365|
+switches_n<5>  |leftSegs<0>    |   22.538|
+switches_n<5>  |leftSegs<1>    |   22.069|
+switches_n<5>  |leftSegs<2>    |   21.853|
+switches_n<5>  |leftSegs<3>    |   22.239|
+switches_n<5>  |leftSegs<4>    |   23.170|
+switches_n<5>  |leftSegs<5>    |   22.379|
+switches_n<5>  |leftSegs<6>    |   21.591|
+switches_n<5>  |rightSegs<0>   |   20.478|
+switches_n<5>  |rightSegs<1>   |   20.101|
+switches_n<5>  |rightSegs<2>   |   20.657|
+switches_n<5>  |rightSegs<3>   |   21.165|
+switches_n<5>  |rightSegs<4>   |   21.214|
+switches_n<5>  |rightSegs<5>   |   21.179|
+switches_n<5>  |rightSegs<6>   |   20.906|
+switches_n<6>  |leds<6>        |   11.455|
+switches_n<6>  |leftSegs<0>    |   21.473|
+switches_n<6>  |leftSegs<1>    |   21.004|
+switches_n<6>  |leftSegs<2>    |   20.788|
+switches_n<6>  |leftSegs<3>    |   21.174|
+switches_n<6>  |leftSegs<4>    |   22.105|
+switches_n<6>  |leftSegs<5>    |   21.314|
+switches_n<6>  |leftSegs<6>    |   20.526|
+switches_n<6>  |rightSegs<0>   |   19.089|
+switches_n<6>  |rightSegs<1>   |   18.793|
+switches_n<6>  |rightSegs<2>   |   19.015|
+switches_n<6>  |rightSegs<3>   |   19.523|
+switches_n<6>  |rightSegs<4>   |   19.481|
+switches_n<6>  |rightSegs<5>   |   19.881|
+switches_n<6>  |rightSegs<6>   |   19.558|
+switches_n<7>  |leds<7>        |   14.467|
+switches_n<7>  |leftSegs<0>    |   25.014|
+switches_n<7>  |leftSegs<1>    |   24.545|
+switches_n<7>  |leftSegs<2>    |   24.329|
+switches_n<7>  |leftSegs<3>    |   24.630|
+switches_n<7>  |leftSegs<4>    |   25.339|
+switches_n<7>  |leftSegs<5>    |   24.701|
+switches_n<7>  |leftSegs<6>    |   24.067|
+switches_n<7>  |rightSegs<0>   |   21.805|
+switches_n<7>  |rightSegs<1>   |   21.346|
+switches_n<7>  |rightSegs<2>   |   21.670|
+switches_n<7>  |rightSegs<3>   |   22.178|
+switches_n<7>  |rightSegs<4>   |   22.142|
+switches_n<7>  |rightSegs<5>   |   22.582|
+switches_n<7>  |rightSegs<6>   |   22.574|
+---------------+---------------+---------+
+
+
+Analysis completed Tue Feb 19 14:40:25 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4527 MB
+
+
+

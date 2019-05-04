@@ -1,0 +1,14 @@
+EN edgedetector NULL //alar.fdi.ucm.es/home/47471034/DAS/common/edgedetector.vhd sub00/vhpl06 1551709708
+PB common common //alar.fdi.ucm.es/home/47471034/DAS/common/common.vhd sub00/vhpl11 1551709701
+AR lab3 syn //alar.fdi.ucm.es/home/47471034/DAS/Pract_03/lab3.vhd sub00/vhpl13 1551709713
+EN bin2segs NULL //alar.fdi.ucm.es/home/47471034/DAS/common/bin2segs.vhd sub00/vhpl08 1551709710
+AR debouncer syn //alar.fdi.ucm.es/home/47471034/DAS/common/debouncer.vhd sub00/vhpl05 1551709707
+EN lab3 NULL //alar.fdi.ucm.es/home/47471034/DAS/Pract_03/lab3.vhd sub00/vhpl12 1551709712
+EN frequencysynthesizer NULL //alar.fdi.ucm.es/home/47471034/DAS/common/frequencysinthesizer.vhd sub00/vhpl02 1551709704
+AR bin2segs syn //alar.fdi.ucm.es/home/47471034/DAS/common/bin2segs.vhd sub00/vhpl09 1551709711
+AR synchronizer syn //alar.fdi.ucm.es/home/47471034/DAS/common/synchronizer.vhd sub00/vhpl01 1551709703
+PH common NULL //alar.fdi.ucm.es/home/47471034/DAS/common/common.vhd sub00/vhpl10 1551709700
+EN synchronizer NULL //alar.fdi.ucm.es/home/47471034/DAS/common/synchronizer.vhd sub00/vhpl00 1551709702
+AR frequencysynthesizer syn //alar.fdi.ucm.es/home/47471034/DAS/common/frequencysinthesizer.vhd sub00/vhpl03 1551709705
+EN debouncer NULL //alar.fdi.ucm.es/home/47471034/DAS/common/debouncer.vhd sub00/vhpl04 1551709706
+AR edgedetector syn //alar.fdi.ucm.es/home/47471034/DAS/common/edgedetector.vhd sub00/vhpl07 1551709709

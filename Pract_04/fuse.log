@@ -1,0 +1,27 @@
+Running: C:\software\electronica\xilinx\14.1\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/hlocal/Pract_04/ps2ReceiverTest_isim_beh.exe -prj C:/hlocal/Pract_04/ps2ReceiverTest_beh.prj work.ps2ReceiverTest 
+ISim P.15xf (signature 0xc3576ebc)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/hlocal/Pract_04/../common/synchronizer.vhd" into library work
+Parsing VHDL file "C:/hlocal/Pract_04/../common/edgedetector.vhd" into library work
+Parsing VHDL file "C:/hlocal/Pract_04/../common/common.vhd" into library work
+Parsing VHDL file "C:/hlocal/Pract_04/../common/ps2receiver.vhd" into library work
+Parsing VHDL file "C:/hlocal/Pract_04/ps2receivertest.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package textio
+Compiling package std_logic_textio
+Compiling package numeric_std
+Compiling package common
+Compiling architecture syn of entity synchronizer [\synchronizer(2,'1')\]
+Compiling architecture syn of entity edgeDetector [edgedetector_default]
+Compiling architecture syn of entity ps2Receiver [\ps2Receiver(true)\]
+Compiling architecture sim of entity ps2receivertest
+Time Resolution for simulation is 1ps.
+Compiled 13 VHDL Units
+Built simulation executable C:/hlocal/Pract_04/ps2ReceiverTest_isim_beh.exe
+Fuse Memory Usage: 37292 KB
+Fuse CPU Usage: 374 ms

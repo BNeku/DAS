@@ -1,0 +1,14 @@
+PB common common C:/hlocal/das/common/common.vhd sub00/vhpl01 1553780610
+AR fifo syn C:/hlocal/das/common/fifo.vhd sub00/vhpl09 1553780616
+EN bin2segs NULL C:/hlocal/das/common/bin2segs.vhd sub00/vhpl10 1553780619
+EN rs232transmitter NULL C:/hlocal/das/common/rs232Transmitter.vhd sub00/vhpl02 1553780617
+AR rs232transmitter syn C:/hlocal/das/common/rs232Transmitter.vhd sub00/vhpl08 1553780618
+EN lab5 NULL C:/hlocal/das/Pract_05/lab5.vhd sub00/vhpl12 1553780621
+AR bin2segs syn C:/hlocal/das/common/bin2segs.vhd sub00/vhpl11 1553780620
+AR synchronizer syn C:/hlocal/das/common/synchronizer.vhd sub00/vhpl04 1553780612
+PH common NULL C:/hlocal/das/common/common.vhd sub00/vhpl00 1553780609
+EN synchronizer NULL C:/hlocal/das/common/synchronizer.vhd sub00/vhpl03 1553780611
+AR lab5 syn C:/hlocal/das/Pract_05/lab5.vhd sub00/vhpl13 1553780622
+EN rs232receiver NULL C:/hlocal/das/common/rs232Receiver.vhd sub00/vhpl05 1553780613
+AR rs232receiver syn C:/hlocal/das/common/rs232Receiver.vhd sub00/vhpl06 1553780614
+EN fifo NULL C:/hlocal/das/common/fifo.vhd sub00/vhpl07 1553780615
